@@ -32,6 +32,10 @@ export class TestComponent implements OnInit {
     //http://docs.servicestack.net/jwt-authprovider#using-an-alternative-jwt-server
     this.client.refreshTokenUri = this.apiHelper.getServiceUrl(this.apiHelper.ServiceNames.auth) + "/access-token";
 
+
+    //expires on 4-19-2018, 5:10pm Pacific Standard Time
+    //this.client.bearerToken = "eyJ0eXAiOiJKV1QiLCJhbGciOiJIUzI1NiIsImtpZCI6Ik1qTSJ9.eyJpc3MiOiJzc2p3dCIsInN1YiI6OCwiaWF0IjoxNTI0MTc5Mjk3LCJleHAiOjE1MjQxODI4OTcsImVtYWlsIjoiU3RldmVfSGFyZGluZ0BUcmFkZVNlcnZpY2UuY29tIiwiZ2l2ZW5fbmFtZSI6IlN0ZXZlIiwiZmFtaWx5X25hbWUiOiJIYXJkaW5nIiwicG9zdGFsQ29kZSI6ODM4MTUsInVzZXJJZCI6OCwidXNlclN0YXR1c0lkIjowLCJwYXNzd29yZCI6Ijg5YkJSekVuVlpudTd3cTA5dldWRDNEZzBYYnZhMVppNVF0aXlEbnY3cjg9IiwiY29tcGFueUlkIjo0NjYwLCJjb21wYW55VHlwZUlkIjowLCJwcm9kdWN0SWRzIjoiMSw2LDE1LDksNywwLDE0IiwicHJvZHVjdEZlYXR1cmVJZHMiOiIwLDEsMiwzLDQsNSw3LDgsMTAsMTIsMTMsMTQsMTUsMTcsMTgsMjAsMjEsMjIsMjMsMjQsMjUsMjYsMzgsMzksNDAsNDEsNDIsNDMsNDQsMTk5LDIwMCwyMDIsMjAzLDIwNSwyMDYsMjA4LDIwOSwyMTAsMjExLDIxOSwyMjAsMjIxLDIyMiwyMjMsMjI0LDIyNSwyMzEsMjMyIiwidXNlclJvbGVzIjoiMjowLDM6MCJ9.AYnhhfVwfZbWBoSrYFklm8tyFSMMVB7zNFdqvug5dVA";
+
     //refresh token is valid, expires in a year
     this.client.refreshToken = "eyJ0eXAiOiJKV1RSIiwiYWxnIjoiSFMyNTYiLCJraWQiOiJNak0ifQ.eyJzdWIiOjgsImlhdCI6MTUyNDE3MzI3MSwiZXhwIjoxNTU1NzA5MjcxfQ.XKVsDKyuCjEKDwfEvM8jSAEh5Cy6tWpQSBwtFPvYpnk";
   }
@@ -40,7 +44,7 @@ export class TestComponent implements OnInit {
     //dto
     var request = new GetRssFeed()
 
-    console.log('----------BEGIN REQUEST----------------');
+    console.log('------------BEGIN REQUEST----------------');
 
     this.client.get(request)
       .then(res => {

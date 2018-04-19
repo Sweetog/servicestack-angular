@@ -40,6 +40,8 @@ export class TestComponent implements OnInit {
     //dto
     var request = new GetRssFeed()
 
+    console.log('----------BEGIN REQUEST----------------');
+
     this.client.get(request)
       .then(res => {
         console.log('SUCCESS, ServiceStack retrieved bearer token and authenticated', res);

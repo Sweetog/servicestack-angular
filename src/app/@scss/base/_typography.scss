@@ -1,0 +1,33 @@
+// $link: #FBC225;
+// $hoverlink: #E5A913;
+
+
+a,
+a:hover,
+a:focus {
+    text-decoration: none;
+}
+
+a{
+    color:$light-blue;
+    &:hover{
+        color: $blue-dark;
+        cursor: pointer;
+    }
+}
+
+.active-link{
+    color: $light-blue;
+}
+
+.subtitle{
+    font-size:$f-16px;
+    margin-bottom: 10px;
+    color:#878787;
+}
+
+.note-text{
+    @include text ($f-14px,$font-light);
+    margin-bottom: 10px;
+    
+}

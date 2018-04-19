@@ -1,0 +1,47 @@
+/*internet explorer scrollbalken*/
+body{
+  scrollbar-base-color: #C0C0C0;
+  scrollbar-base-color: #C0C0C0;
+  scrollbar-3dlight-color: #C0C0C0;
+  scrollbar-highlight-color: #C0C0C0;
+  scrollbar-track-color: #EBEBEB;
+  scrollbar-arrow-color: black;
+  scrollbar-shadow-color: #C0C0C0;
+  scrollbar-dark-shadow-color: green;
+}
+/*mozilla scrolbalken*/
+@-moz-document  {
+    scrollbar {
+        -moz-appearance: none !important;
+    }
+    thumb,scrollbarbutton {
+        width:10px;
+        -moz-appearance: none !important;
+    }
+
+    thumb:hover,scrollbarbutton:hover {
+        -moz-appearance: none !important;
+    }
+
+    scrollbarbutton {
+        display: none !important;
+    }
+
+    scrollbar[orient="vertical"] {
+        min-width: 15px !important;
+    }
+}
+
+
+::-webkit-scrollbar {
+    background: transparent;
+    width:8px;
+    height: 8px  
+}
+::-webkit-scrollbar-thumb {
+    background-color: rgba(0, 0, 0, 0.2);
+    width:10px;
+}
+::-webkit-scrollbar-thumb:hover {
+    background-color: rgba(0, 0, 0, 0.3);
+}

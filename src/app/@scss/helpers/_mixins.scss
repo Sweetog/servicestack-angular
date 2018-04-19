@@ -1,0 +1,189 @@
+@mixin text($size:14px, $color: $font, $weight: 500) {
+    font-size: $size;
+    color: $color;
+    font-weight: $weight;
+}
+
+@mixin flex-space-between{
+    @extend .flex ;
+    justify-content: space-between;
+}
+
+@mixin flex-end{
+    @extend .flex ;
+    justify-content: flex-end;
+}
+
+@mixin flex-start{
+    display: flex;
+    justify-content: flex-start;
+}
+
+@mixin flex-wrap{
+    @extend .flex;
+    flex-wrap: wrap;
+}
+
+@mixin size($width: auto, $height: auto){
+    width: $width;
+    height: $height;
+}
+
+@mixin square($size: auto){
+    width: $size;
+    height: $size;
+}
+
+@mixin placement($position,$top:inherit, $right: inherit, $bottom:inherit, $left:inherit){
+    position: $position;
+    top:$top;
+    right: $right;
+    bottom: $bottom;
+    left: $left;
+}
+
+
+@mixin flex-center(){
+    justify-content: center;
+    align-items: center;
+    display: flex;
+}
+
+/////////////////////////////////
+// ADD AN ICON BEFORE OR AFTER //
+/////////////////////////////////
+
+@mixin icon($icon){
+    &{
+     font-family: 'Material Icons';
+     content: $icon;
+    }
+}
+
+// @include icon-after("\E80E")
+@mixin icon-after($icon){
+    &:after{
+        font-family: 'Material Icons';
+        content: $icon;
+    }
+}
+
+@mixin icon-before($icon){
+    &:before{
+        font-family: 'Material Icons';
+        content: $icon;
+    }
+}
+
+//////////////////
+// STYLE A LINK //
+//////////////////
+
+@mixin linx($link, $hover, $active){
+   
+        color: $link;
+        &:hover{
+            color: $hover;
+        }
+        &:active{
+            color: $active;
+        } 
+}
+
+
+///////////////
+// GRADIENTS //
+///////////////
+@mixin gradient-blue(){
+        background: #003d5b; /* Old browsers */
+        background: -moz-linear-gradient(45deg, #003d5b 0%, #055991 100%); /* FF3.6-15 */
+        background: -webkit-linear-gradient(45deg, #003d5b 0%,#055991 100%); /* Chrome10-25,Safari5.1-6 */
+        background: linear-gradient(45deg, #003d5b 0%,#055991 100%); /* W3C, IE10+, FF16+, Chrome26+, Opera12+, Safari7+ */
+}
+
+///////////////
+@mixin gradient-blue-opaque(){
+    background: rgba(1,37,66,1);
+    background: -moz-linear-gradient(45deg, rgba(1,37,66,1) 0%, rgba(0,95,158,0.82) 100%);
+    background: -webkit-gradient(left bottom, right top, color-stop(0%, rgba(1,37,66,1)), color-stop(100%, rgba(0,95,158,0.82)));
+    background: -webkit-linear-gradient(45deg, rgba(1,37,66,1) 0%, rgba(0,95,158,0.82) 100%);
+    background: -o-linear-gradient(45deg, rgba(1,37,66,1) 0%, rgba(0,95,158,0.82) 100%);
+    background: -ms-linear-gradient(45deg, rgba(1,37,66,1) 0%, rgba(0,95,158,0.82) 100%);
+    background: linear-gradient(45deg, rgba(1,37,66,1) 0%, rgba(0,95,158,0.82) 100%);
+    filter: progid:DXImageTransform.Microsoft.gradient( startColorstr='#012542', endColorstr='#005f9e', GradientType=1 );
+}
+
+/////////////
+// QUERIES //
+/////////////
+@mixin short-window() {
+    @media (max-height: 767px) {
+           @content;
+    }  
+}
+@mixin med-window() {
+    @media (max-width: 767px) {
+           @content;
+    }  
+}
+
+@mixin lrg-window() {
+    @media (max-width: 992px) {
+           @content;
+    }  
+}
+
+@mixin xl-window() {
+    @media (max-width: 1200px) {
+           @content;
+    }  
+}
+
+@mixin placeholder($color){
+    &::-webkit-input-placeholder { /* Chrome/Opera/Safari */
+        color: $color;
+    }
+    &::-moz-placeholder { /* Firefox 19+ */
+        color: $color;
+    }
+    &:-ms-input-placeholder { /* IE 10+ */
+        color: $color;
+    }
+    &:-moz-placeholder { /* Firefox 18- */
+        color: $color;
+    }
+}
+
+///////////////////////
+// Internet Explorer //
+///////////////////////
+@mixin ie(){
+    @media screen and (-ms-high-contrast: active), screen and (-ms-high-contrast: none) {  
+        /* IE10+ specific styles go here */  
+        @content;
+     }
+}
+
+
+/////////////////
+// DROP SHADOW //
+/////////////////
+@mixin card-shadow(){
+    -webkit-box-shadow: 0px 0px 9px 2px rgba(0,0,0,0.05);
+    -moz-box-shadow: 0px 0px 9px 2px rgba(0,0,0,0.05);
+    box-shadow: 0px 0px 9px 2px rgba(0,0,0,0.05);
+}
+
+@mixin card-shadow-hover(){
+    -webkit-box-shadow: 0px 0px 9px 2px rgba(0,0,0,0.27);
+    -moz-box-shadow: 0px 0px 9px 2px rgba(0,0,0,0.27);
+    box-shadow: 0px 0px 9px 2px rgba(0,0,0,0.27);
+}
+
+//Ellipsis
+@mixin ellipsis($width){
+        width: $width;
+        white-space: nowrap; 
+        text-overflow: ellipsis; 
+        overflow: hidden;
+}

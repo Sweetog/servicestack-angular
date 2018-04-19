@@ -1,0 +1,20 @@
+.pagination{
+    &-container{
+        width: 100%;
+        display: flex;
+        justify-content: center
+    }
+    &-wrapper{
+        display: flex;
+        align-items: center;
+    }
+    &-number{
+        @include square(40px);
+        padding: 7px;
+        text-align: center;
+        &:hover{
+            background: $gray-light;
+            cursor: pointer;
+        }
+    }
+}

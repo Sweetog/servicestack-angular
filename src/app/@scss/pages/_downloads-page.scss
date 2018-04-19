@@ -1,0 +1,13 @@
+.downloads-card{
+    width: 350px;
+    &-body{
+        margin-bottom: 63px;
+    }
+    &-buttons{
+        display: flex;
+        margin-top: 20px;
+        justify-content: flex-end;
+        align-items: center;
+        @include placement(absolute, null, 15px , 15px);
+    }
+}

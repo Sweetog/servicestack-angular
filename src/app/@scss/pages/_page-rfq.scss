@@ -1,0 +1,31 @@
+///////////////////
+// RFQ DASHBAORD //
+///////////////////
+
+//MAY WANT TO MAKE THESE DASH TILES MORE GENERAL TO USE ACROSS ALL DASHBOARDS
+.dash{
+    &-tile{
+        padding: 40px;
+        &:hover{
+            color:$yellow-main;
+            border: $yellow-main solid 4px;
+            cursor: pointer;
+        }
+    }
+}
+
+
+.dist-graphic,
+.rfq-graphic{
+    @include size(auto, 200px);
+}
+
+@include med-window{
+    .dash-tile{
+        margin-top: 5px;
+    }
+    .dist-graphic,
+    .rfq-graphic{
+        @include size(auto, 150px);
+    }
+}

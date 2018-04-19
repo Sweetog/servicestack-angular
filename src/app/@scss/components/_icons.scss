@@ -1,0 +1,37 @@
+.qty-icon{
+    background: $light-blue;
+    border-radius: 20px;
+    padding: 9px 7px 7px 7px;
+    @include text(0.55em,#fff, 700);
+    @include square(31px);
+    &-container{
+        display: flex;
+        align-items: center;
+        &:hover{
+            .qty-icon-value{
+                color: $yellow-main;
+                cursor: pointer;
+            }
+            .qty-icon{
+                background: $yellow-main;
+                cursor: pointer;
+            }
+        }
+    }
+    &-value{
+        margin-left:3px;
+        @include text($f-16px,$light-blue, 300);
+    }
+}
+
+.pill-circle{
+    color:$blue-main;
+    background: $yellow-main;
+    border-radius: 30px;
+    padding: 7px;
+    font-size: $f-14px;
+    text-align: center;
+    height: 35px;
+    min-width: 35px;
+}
+

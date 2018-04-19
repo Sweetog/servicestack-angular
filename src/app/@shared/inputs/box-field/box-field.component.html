@@ -1,0 +1,16 @@
+<div class="box-field" [ngClass]="{ 'box-field-light' : type === 'light', 
+                                    'box-field-dark' : type === 'dark', 
+                                    'box-field-icon' : hasIcon }">
+    <div class="box-field-submit" (click)="submit(value)">
+        <i class="material-icons">{{icon}}</i>        
+    </div>
+    <input 
+        #input
+        (keyup.enter)="enter(value)"
+        (keyup)="keyUp(value)" 
+        id="{{inputId}}"  
+        placeholder="{{placeHolder}}" 
+        [(ngModel)]="value" >
+ </div>
+
+

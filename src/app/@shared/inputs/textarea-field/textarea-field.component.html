@@ -1,0 +1,12 @@
+<div class="group" *ngIf="validator">      
+    <ng-content></ng-content>
+    <span class="highlight"></span>
+    <span [ngClass]="{'bar-light' : type === 'light', 'bar-dark' : type === 'dark' }"  class="col-sm-12"></span>
+    <label class="form-field-label text-area-label" >{{label}}<span *ngIf="validator && validator.required" class="red">*</span></label>
+    <!-- error message -->
+    <span class="help-block" *ngIf="validator.hasError">
+        <p class="error-block" *ngFor="let message of validator.messages">{{ message }}</p>
+    </span>
+</div>
+
+

@@ -1,0 +1,29 @@
+version: '3'
+services:
+  frontendproduction:
+    build: 
+      context: ./
+      dockerfile: docker/Dockerfile
+    image: tsl.web.frontend.image
+    container_name: tsl.web.frontend.container
+    ports:
+      - "81:80"
+    restart: always
+  frontendstaging:
+    build: 
+      context: ./
+      dockerfile: docker/Dockerfile
+    image: tsl.web.frontend.image
+    container_name: tsl.web.frontend.container
+    ports:
+      - "81:80"
+    restart: always
+  frontend:
+    build: 
+      context: ./
+      dockerfile: docker/Dockerfile
+    image: tsl.web.frontend.image
+    container_name: tsl.web.frontend.container
+    ports:
+      - "80:80"
+    restart: always

@@ -1,0 +1,66 @@
+///////////////
+// list Card //
+///////////////
+.product-list{
+    margin: 5px 10px 5px 5px;
+    padding: 5px;
+    @include size(100%);
+    &-container{
+        margin-left: 13px;
+        @include size(100%);
+    }
+    &-cards{
+        &-container{
+            @include flex-wrap;
+            padding: 0px 0px 0px 0px;
+        }
+    }
+    &-hr{
+        margin-top:3px;
+        margin-bottom: 3px;
+        width: 100%;
+    }
+    &-title{
+            padding-bottom: 5px;
+            @include text(inherit, $font);
+    }
+    &-image{
+        &-container{
+            @include size(90px,90px);
+            overflow-y: hidden;
+            margin: 10px 0px 0px 10px;
+            display: flex;
+            align-items: center;
+            justify-content: center;
+        }
+        &-tall{
+            @include size(auto, 90px);            
+        }
+        &-wide{
+            @include size(90px, auto);
+        }
+        &-and-check-box{
+            @include placement(absolute, 5px,null,null, 5px);
+        }
+    }
+    
+    &-content{
+        width: 100%;
+        padding: 15px 15px 15px 100px;
+    }
+    &-key-value-container{
+        > .key-value-block
+        > .key-value{
+            @include ellipsis(100%);
+        }
+    }
+
+    &-buttons{
+        @include placement(absolute, null, null, 0px, 0px);
+        width: 100%;
+        height: 52px;
+        padding: 4px;
+        background: $blue-dark;
+    }
+    
+}

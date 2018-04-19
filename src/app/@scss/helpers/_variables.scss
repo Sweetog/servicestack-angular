@@ -1,0 +1,168 @@
+//------------------------------------------------//
+// COLORS
+//------------------------------------------------//
+
+///////////
+// BLACK //
+///////////
+$font:#666;
+$font-dark:darken( $font, 15% );
+$font-light: lighten( $font, 10% );
+$transparent: rgba(0,0,0,0.3);
+$black: #1B1927;
+
+
+//////////
+// BLUE //
+//////////
+$blue-main: #005F9E; //rgba(0, 95, 158, 1)
+$blue-dark: #00437B;
+$blue-black: darken( $blue-dark, 10% );
+
+$light-blue: #009AD9;
+$light-blue-light: lighten($light-blue, 10%);
+
+////////////
+// YELLOW //
+////////////
+$yellow-main: #FFBE00; //rgba(255, 190, 0, 1)
+$yellow-light: #FFD200;
+$yellow-white: lighten($yellow-light , 10% );
+
+////////////
+// ORANGE //
+////////////
+$orange-main: #ff8b00;
+
+/////////
+// RED //
+/////////
+$red: #A51D25;
+$red-light: lighten( $red, 10% );
+
+//////////
+// GRAY //
+//////////
+$gray: #EDEDEF;
+$gray-light: #E2E2E7;
+$gray-dark: #AEAEB6;
+$scroll-gray: #f4f4f4;
+$page-backdrop: #f2f2f2;
+
+///////////
+// GREEN //
+///////////
+$green-success: #94D891;
+$green: darken($green-success,10%);
+
+//------------------------------------------------//
+// TYPOGRRAPHY
+//------------------------------------------------//
+
+///////////
+// FONTS //
+///////////
+$font-stack: 'Open Sans', sans-serif;
+$font-small: 12px;
+$font-med: 14px;
+$font-large: 16px;
+$font-xl: 18px;
+$font-xxl: 20px;
+
+$f-12px: 0.7500em;	
+$f-13px: 0.8125em;	
+$f-14px: 0.8750em;	
+$f-15px: 0.9375em;	
+$f-16px: 1.0000em;	
+$f-17px: 1.0625em;	
+$f-18px: 1.1250em;	
+$f-19px: 1.1875em;	
+$f-20px: 1.2500em;	
+$f-21px: 1.3125em;	
+$f-22px: 1.3750em;	
+$f-23px: 1.4375em;	
+$f-24px: 1.5000em;	
+$f-28px: 1.75em;
+
+//------------------------------------------------//
+// GRAPH
+//------------------------------------------------//
+$blue-graph: rgba(0, 154, 217, 0.58);
+$yellow-graph: rgba(255, 165, 0, 0.58);
+
+
+//------------------------------------------------//
+// CARDS
+//------------------------------------------------//
+$sidebar-width: 5px;
+
+
+
+
+/* These are for reference - the colors above have been renamed with these colors. The 
+colors above are in use, do not use names of variables below. */
+
+// Trimble SASS Color variables 
+// V3 - 4 May 2016
+//Brand colors
+$col_trimble_blue_dark:#002D5B;
+$col_trimble_blue:#00437B;
+$col_trimble_blue_mid:#005F9E;
+$col_trimble_blue_light:#009AD9;
+$col_trimble_yellow: #FFBE00;
+$col_trimble_green: #4D6F33;
+$col_trimble_red: #A51D25;
+
+//Grayscale
+$col_white: #FFFFFF;
+$col_gray_half: #f9f9fb;
+$col_gray_light: #F3F3F7;
+$col_gray_0: #EAEAEF;
+$col_gray_1: #E2E2E7;
+$col_gray_2: #D0D0D7;
+$col_gray_3: #BFBFC6;
+$col_gray_4: #AEAEB6;
+$col_gray_5: #9D9DA6;
+$col_gray_6: #8C8B96;
+$col_gray_7: #7B7A86;
+$col_gray_8: #6A6976;
+$col_gray_9: #595868;
+$col_gray_10: #474655;
+$col_trimble_gray: #363545;
+$col_gray_dark_1: #262533;
+$col_gray_dark_2: #1B1A26;
+$col_gray_dark_3: #0B0A12;
+$col_black: #000000;
+
+//Blue Buttons & Notifications
+$col_blue: #0D6AA8;
+$col_blue_light: #197CB6;
+$col_blue_dark: #07599B;
+$col_blue_pale: #CFE1EE;
+
+//Green Buttons & Notifications
+$col_green: #5E9331;
+$col_green_light: #72A544;
+$col_green_dark: #4A821F;
+$col_green_pale: #DFE9D6;
+
+//Yellow Buttons
+$col_yellow: #FFBE00;
+$col_yellow_light: #FFD200;
+$col_yellow_dark: #FFA500;
+$col_yellow_pale: #FFF2CC;
+
+//Orange Notifications
+$col_orange: #ff8b00;
+$col_orange_light: #ffa500;
+$col_orange_dark: #ff6e00;
+$col_orange_pale: #FFE8CC;
+
+//Red Buttons & Notifications
+$col_red: #C81922;
+$col_red_light: #D52A33;
+$col_red_dark: #BC0911;
+$col_red_pale: #F4D1D3;
+
+//Markup
+$col_markup: #ff00ff;

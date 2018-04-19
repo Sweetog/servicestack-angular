@@ -1,0 +1,234 @@
+$nav-accent: #b7d0e0;
+$nav-link: #fff;
+$nav-link-hover: #88BFE2;
+$menu-background: #003D5B;
+$menu-text: #fff;
+$main-nav-height: 60px;
+
+
+
+/////////////////////////
+// MAIN HEADER  (LOGO) //
+/////////////////////////
+.main-nav{
+    &-container {
+        background-color: $blue-main;
+        @include flex-space-between;
+        height: $main-nav-height;
+    }
+
+    &-search{
+        background-color: $blue-main;
+        @include size(100% , 100px);
+        position: absolute;
+        z-index: 1051;
+        justify-content: center;
+        display: flex;
+        align-items: center;
+        flex-direction: column;
+        & .close-section-dark{
+            @include placement( absolute, 0px, 0px);
+        }
+        & > ts-box-field{
+            width: 500px;
+        }
+        & > .search-by{
+            width: 500px;
+        }
+    }
+
+    //Generl Main-Nav icons
+    &-icon{
+         background-color: $blue-dark;
+         @include size(73px, $main-nav-height);
+         padding: 18px 0px 0px 23px;
+         &:hover{
+             background-color: $yellow-main;
+             cursor: pointer;
+         }
+    }
+
+    //Generl Main-Nav links
+    &-links {
+        color: #fff;
+        display: flex;
+        & .material-icons{
+            @include text(24px, $nav-link);
+            &:hover{
+                color:$nav-link;
+                cursor: pointer;
+            } 
+        }
+        a {
+            @include linx($nav-link,$nav-link-hover, $nav-link-hover );
+        }
+        @include lrg-window {
+            & { display: none; }
+        }
+    }
+
+    // All links in Main Nav Link(s) container.
+    &-link{
+        color:$nav-link;
+        height: 60px;
+        & > span{
+            vertical-align: top;
+        }
+        padding: 18px 24px 0px 0px;
+        &:hover{
+            & > .material-icons,
+            & {
+               color: $yellow-main;
+               cursor: pointer;
+            } 
+        }
+        & > .material-icons{
+            font-size: $f-24px;
+            margin: 0px 2px 3px 0px;
+        }
+    }
+
+    // Notification Link
+    &-notication{
+        position: relative;
+        &-icon{
+                background-color: $blue-dark;
+                @include size(73px, $main-nav-height);
+                    padding: 18px 0px 0px 23px;
+                &:hover{
+                    cursor: pointer;
+                    background-color: $yellow-main;
+                }
+        }
+        &-indicator{
+            @include placement(absolute, 8px, null, null, 32px);
+            @include text(15px, #fff);
+            background: $red;
+            border-radius: 14px;
+            @include size(22px, 22px);
+            padding-left: 6px;
+            &:hover{
+               cursor: pointer;
+               background-color: $red-light;
+            }
+            
+        }
+        &:hover{
+            &-icon{
+                background-color: $yellow-main;
+            }
+        }
+    }
+    &-mobile{
+        display: none;
+        padding: 6px 25px 0px 0px;
+         @include lrg-window {
+            & { display: block; }
+        }
+        &-drop-down{
+            background: $blue-main;
+            position:fixed;
+            padding:15px;
+            margin:0;
+            top:0;
+            left:0;
+            width: 100%;
+            height: 100%;
+            z-index: 2000;
+        }
+    }
+}// end .main-nav
+
+.main-logo{
+    padding: 3px 0px 0px 14px;
+    height: 43px;
+}
+
+
+///////////////
+// MAIN MENU //
+///////////////
+.main-menu{
+    @include size(70px, 100vh);
+    background-color: $menu-background;
+    @include placement(fixed, $main-nav-height, 0, 0, 0px);
+    z-index: 1032;
+    padding: 0px 20px;
+
+    //Expand Link 
+    &-expand{
+        padding-top: 10px;
+        @include text(30px, #fff);
+        &:hover {
+            color:$menu-text;;
+            cursor: pointer;
+        }
+    }
+
+    //Menu Links
+    &-links{
+        list-style: none;
+        padding: 0px 0px 0px 3px;
+        li a{
+            display: flex;
+            padding-top: 32px;
+            @include linx(#fff,$yellow-main, $yellow-main );
+            &:hover > i {
+                color: $yellow-main;
+            }
+        }
+        .material-icons{
+            font-size: $f-24px;
+            color:$menu-text;
+        }
+    }
+
+    //Menu Link 
+     &-link{
+        padding: 2px 0px 0px 20px;
+        font-size: 0.8750em;
+        &-active{
+            & > .material-icons{
+                color:$yellow-main;
+            }
+            & > .main-menu-link{
+                color:$yellow-main;
+            }
+        }
+    }
+
+    &-overlay{
+        z-index: 1031;
+        @include placement(fixed, 0px, null, null, 0px);
+        @include size(100%, 100%);
+        background-color: $transparent;
+    }
+
+}// .main-menu
+
+.wheelbarrow{
+    height:25px;
+    &-count{
+        position: absolute;
+        top: 6px;
+        left: -9px;
+        color:$blue-main;
+        background: $yellow-main;
+        border-radius: 30px;
+        padding: 7px;
+        font-size: 0.875em;
+        text-align: center;
+        height: 35px;
+        min-width: 35px;
+    }
+    &-icon{
+        background-color: $blue-dark;
+        width: 73px;
+        height: 60px;
+        padding: 16px 0px 0px 21px;
+        &:hover{
+            cursor: pointer;
+            background-color: $yellow-main;
+        }
+    }
+}

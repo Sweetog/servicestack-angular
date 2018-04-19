@@ -1,0 +1,65 @@
+.alternate-modal{
+    &-head{
+        margin-left: 62px;
+        &-attr{
+            @include ellipsis(150px);
+        }
+        &-price{
+            @include ellipsis(80px);
+        }
+    }
+    &-head,
+    &-body{
+        margin-bottom: 10px;
+        /*
+        Note: small and larg-value blocks are implimented here to control the size of
+        the "key-value-blocks" very specifically in this case. Not very happy with the 
+        implimentation or naming may need to come back and make more general.
+        */
+        .small-value-block{
+            min-width: 150px;
+            padding: 10px;
+        }
+        .large-value-block{
+            min-width: 256px;
+            padding: 10px;
+            //Remove bottom margin on select inputs
+            .group {
+                margin-bottom: 0px;
+            }
+        }
+    }
+}
+
+.alternate-dist-modal{
+    &-head{
+        margin-left: 7px;
+        &-attr{
+            @include ellipsis(150px);
+        }
+        &-price{
+            @include ellipsis(80px);
+        }
+    }
+    &-head,
+    &-body{
+        margin-bottom: 10px;
+        /*
+        Note: small and larg-value blocks are implimented here to control the size of
+        the "key-value-blocks" very specifically in this case. Not very happy with the 
+        implimentation or naming may need to come back and make more general.
+        */
+        .small-value-block{
+            min-width: 150px;
+            padding: 10px;
+        }
+        .large-value-block{
+            min-width: 256px;
+            padding: 10px;
+            //Remove bottom margin on select inputs
+            .group {
+                margin-bottom: 0px;
+            }
+        }
+    }
+}

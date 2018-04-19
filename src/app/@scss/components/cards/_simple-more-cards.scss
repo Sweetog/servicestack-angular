@@ -1,0 +1,76 @@
+////////////////////////
+// SIMPLE "MORE" CARD //
+////////////////////////
+
+.simple-more-card{
+    @include size(300px);
+    padding:15px 15px 15px 25px;
+    margin: 5px;
+    &-side-bar{
+        @include placement(absolute,0px,null,null,0px);
+        @include size($sidebar-width, 100%);
+        background: $blue-main;
+        &-active{
+            @extend .simple-more-card-side-bar;
+            background: $light-blue; 
+        }
+        &-disabled{
+            @extend .simple-more-card-side-bar;
+            background: $gray-dark;
+        }
+        &-pending{
+            @extend .simple-more-card-side-bar;
+            background: $yellow-light;
+        }
+    }
+    &-name{
+        @include ellipsis(100%);
+        margin-top: 10px;
+        @include text($f-16px,$font,600);
+        height:40px;
+    }
+    &-value-block{
+        padding:5px 5px 5px 0px;
+        &-double{
+            padding:5px 5px 5px 0px;
+            height: 75px;
+        }
+        &-single{
+            padding:5px 5px 5px 0px;
+            height: 51px;
+        }
+    }
+    &-warning{
+        @include placement(absolute, -40px, null, null, 0px);
+        @include size(100%, 40px);
+        background:$yellow-light; 
+        color:$blue-main; 
+        padding:5px;
+        display: flex;
+        align-items: center;
+    }
+    &-more{
+        &-container{
+            position: absolute;
+            @include square(100%);
+            background: #fff;
+            padding: 15px 15px 15px 15px;
+            margin: -15px 0px 0px -25px;
+            .dist-request-form{
+                height:233px;// this keeps height of form with toggling.
+            }
+            .rfq-distributors{
+                @include size(100%, 206px);
+                padding:10px;
+                background: $scroll-gray;
+                overflow-x: hidden;
+                overflow-y: scroll;
+            }
+        }
+        &-link{
+            height: 24px;
+        }
+    }
+    
+}
+

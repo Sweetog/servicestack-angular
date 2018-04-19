@@ -1,0 +1,64 @@
+//////////////////
+// PRODUCT CARD //
+//////////////////
+/* Note: these are the card for each item/products 
+   for example the product cards when searching for an product */
+   .product-card{
+    margin: 5px;
+    @include size(250px);
+    &-image{
+        &-container{
+            margin-top: 20px;
+            margin-bottom: 30px;
+            @include size(100%, 138px);
+            overflow: hidden;
+            display: flex;
+            justify-content: center;
+            align-items: center;
+        }
+        &-tall{
+            @include size(auto, 130px);            
+        }
+        &-wide{
+            @include size(147px, auto);
+        }
+        margin: 0px 29px 0px 29px;
+    }
+    &-attributes{
+        margin: 20px 10px 5px 10px;
+        & > hr{
+            margin:5px 0px 5px 0px;
+        }
+    }
+    &-price{
+        &-container{
+            border: 1px solid $blue-main;
+            @include size(100%);
+            padding: 5px 10px;
+            @include text(inherit,#fff);
+            background-color: $blue-main;
+        }
+        &-label{
+            @include text($f-14px, inherit);
+        }
+        &-type{
+            @include text(inherit,inherit,200);
+        }
+        &-number{
+            @include text($f-18px,inherit,200);
+        }
+        &-uom{
+            @include text(inherit,inherit,200);
+        }
+        &-hr{
+            margin:5px 0px 5px 0px;
+            border-top: 1px solid $blue-dark;
+        }
+    }
+    &-quick-view{ 
+      background-color: $blue-dark;
+      text-align: center;
+      height: 40px;
+      padding: 5px;
+    }
+}

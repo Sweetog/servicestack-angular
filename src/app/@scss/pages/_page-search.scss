@@ -1,0 +1,37 @@
+////////////
+// TRASER //
+////////////
+
+.page-search{
+    &-pills{
+        display: flex;
+        flex-wrap: wrap;
+    }
+}
+
+.filter-bar{
+    @include size(100%);
+    display: flex;
+    flex-wrap: wrap;
+    align-content: center;
+    justify-content: space-between;
+    &-container{
+        margin-bottom: 20px;
+        padding: 15px;
+        @include med-window {
+            & {
+                margin-right:0px;
+            }
+        }
+    }
+    &-filters{
+        @include size(100%);        
+        display: flex;
+        flex-wrap: wrap;
+        justify-content: flex-end;
+    }
+}
+
+
+
+

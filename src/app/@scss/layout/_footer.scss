@@ -1,0 +1,20 @@
+.footer {
+    padding: 15px;
+    @include size(100%);
+    // background-color: #e4e3e3;
+    // margin-left: 70px;
+    // padding:36px;
+    color: #a9a5a5;
+    font-size: $f-14px;
+    // height: 200px;
+    // width: 100%;
+    // background-color: red;
+}
+
+.copyright-link{
+    color:$gray-dark;
+    &:hover{
+        cursor: pointer;
+        color:$blue-main;
+    }
+}

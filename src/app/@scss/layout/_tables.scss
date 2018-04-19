@@ -1,0 +1,100 @@
+
+////////////////
+// FLEX TABLE //
+////////////////
+
+.flex-table{
+    &-container{
+        display: flex;
+        flex-wrap: wrap;
+
+        @media (min-width: 2417px) {
+            & > :nth-child(9n+0) {
+                border-right: solid $gray 1px;
+            }
+        }
+
+        @media (max-width: 2416px) and (min-width: 2167px) {
+           & > :nth-child(8n+0) {
+                border-right: solid $gray 1px;
+            }
+        }
+
+        @media (max-width: 2166px) and (min-width: 1916px) {
+           & > :nth-child(7n+0) {
+                border-right: solid $gray 1px;
+            }
+        } 
+
+        @media (max-width: 1915px) and (min-width: 1665px) {
+           & > :nth-child(6n+0) {
+                border-right: solid $gray 1px;
+            }
+        } 
+
+        @media (max-width: 1664px) and (min-width: 1414px) {
+           & > :nth-child(5n+0) {
+                border-right: solid $gray 1px;
+            }
+        } 
+
+        @media (max-width: 1415px) and (min-width: 1165px) {
+           & > :nth-child(4n+0) {
+                border-right: solid $gray 1px;
+            }
+        } 
+
+        @media (max-width: 1164px) and (min-width: 914px) {
+           & > :nth-child(3n+0) {
+                border-right: solid $gray 1px;
+            }
+        } 
+
+        @media (max-width: 913px) and (min-width: 663px) {
+            & > :nth-child(even) {
+               border-right: solid $gray 1px;
+            }
+        } 
+        @media (max-width: 662px) {
+            .flex-table-block{
+                border-right: solid $gray 1px;
+            }
+        } 
+
+    }
+    &-block{
+       border-top: solid $gray 1px;
+       border-left: solid $gray 1px;
+       border-bottom: solid $gray 1px;
+       &-last{
+           border-right: solid $gray 1px;
+       }
+    }
+    &-label{
+        font-size:$f-14px;
+        background: $gray;
+        padding:10px;
+        width: 250px;
+        min-width: 250px;
+    }
+    &-value{
+        width: 250px;
+        min-width: 250px;
+        padding:10px;
+        font-weight: 200;
+    }
+
+}
+
+
+///////////////////
+// TABLE PRIMARY //
+///////////////////
+.table-primary{
+    background-color: #fff;
+    > thead > tr > th{
+        border-top: 0px;
+        border-bottom: 1px;
+    }
+}
+    

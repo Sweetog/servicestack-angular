@@ -1,0 +1,12 @@
+{
+    "services": [
+        {
+            "name": "account",
+            "url": "localhost"
+        }
+    ],
+    "isTest": true,
+    "isDevelopment": true,
+    "isStaging": false,
+    "isProduction": false
+}

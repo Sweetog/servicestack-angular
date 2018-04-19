@@ -1,0 +1,43 @@
+ts-column-mapping{
+    display: flex;
+    width: 100%;
+}
+
+ts-mapping-summary{
+    width: 100%;
+}
+
+.mapping{
+    &-summary{
+        display: flex;
+        flex-wrap: wrap;
+        &-container{
+            margin-top: 20px;
+        }
+    }
+}
+
+
+
+.summary{
+    &-reconciliation{
+        margin-bottom: 40px;
+        &-container{ 
+            margin-top:40px;
+        }
+        &-checkbox{
+            display: flex;
+            justify-content: space-between;
+            width: 300px;
+            &-container{
+                display: flex;
+                @include lrg-window {
+                    & {
+                        width: 100%;
+                        justify-content: flex-end;
+                    }
+                }
+            }
+        }
+    }  
+}

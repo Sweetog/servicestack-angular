@@ -1,0 +1,76 @@
+.fade.show {
+    opacity: 1;
+    background-color: $transparent;
+}
+
+//////////////////////////
+// Global Modal  Styles //
+//////////////////////////
+.wizard{
+    &-title{
+        font-size:$f-20px;
+        margin-bottom: 10px;
+    }
+}
+.modal{
+    &-dialog{
+        overflow-x: hidden;
+    }
+    &-title{
+        @include text($f-24px, inherit, 300);
+        margin-bottom: 10px;
+    }
+    &-subtitle{
+        @extend .subtitle;
+    }
+    &-content{
+       border-radius: 0px; 
+       overflow-x: hidden; //firefox - Windows
+    }
+    &-confirmation{
+        margin-top:40px;
+        &  .btn-primary{
+            @include placement(absolute, null, 15px, 15px, null);
+        }
+    }
+    &-close{
+        @include placement(absolute, 4px, 10px);
+        top: 4px;
+        & > .close{
+            font-weight: 400;
+        }
+    }
+    &-body{
+        &-container{
+            display: flex;
+            padding: 19px 15px 15px 15px;
+        }
+    }
+    &-back-button{
+        margin-bottom: 40px;
+        & > ts-format-control {
+        @include placement(absolute, 2px, null, null, 4px);
+        }
+    }
+}
+
+// LABEL VALUE PAIRS.
+.modal-label-value-group{
+    margin-bottom: 10px;
+}
+
+
+///////////////////
+// Media Queries //
+///////////////////
+@media (min-width: 576px){
+    .modal-dialog-large{
+        max-width: 721px;
+        margin: 100px auto;
+    }
+   
+}
+
+
+
+

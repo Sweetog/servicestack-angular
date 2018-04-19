@@ -1,0 +1,10 @@
+
+<div class="checkbox-container">
+    <input 
+        [checked]='checked' 
+        (change)="handleCheck($event.target.checked)"  
+        type="checkbox" 
+        id="{{cssId}}">
+    <!-- This label is here for syntax reasons only, if you need a labeled checkbox please use "checkbox-labeled"  -->
+    <label for="{{cssId}}"><span class="checkbox"></span></label>
+</div>

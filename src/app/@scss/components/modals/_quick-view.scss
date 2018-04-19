@@ -1,0 +1,56 @@
+////////////////////////
+// PRODUCT QUICK VIEW //
+////////////////////////
+.modal{    
+    &-body-quickview{
+        // Contains Name and Image
+        &-left{
+            @include size(300px);
+        }
+        // Contains Attributes and Description
+        &-right{
+            @include size(350px);
+        }
+    }
+    // Product Modal Image
+    &-product{
+        &-image{
+            &-container{
+                overflow: hidden;
+                display: flex;
+                justify-content: center;
+                align-items: center;
+                height: 209px;
+            }
+            margin: 22px;
+            &-tall{
+                @include size(auto, 209px);            
+            }
+            &-wide{
+                @include size(220px,auto);
+            }
+        }
+    }
+    &-description{
+        &-container{
+            @include flex-space-between;
+        }
+    }
+    &-footer{
+        &-container{
+            display: flex;
+            justify-content: flex-end;
+            background-color: $blue-main;
+            width: 100%;
+        }
+    }
+}
+
+///////////////////
+// Media Queries //
+///////////////////
+@media (min-width: 576px){
+    .modal-dialog-quickview{
+       @extend .modal-dialog-large;
+    }
+}

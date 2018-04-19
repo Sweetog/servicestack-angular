@@ -1,0 +1,347 @@
+// Add "@extend .clear-btn-style;" to clear button styles.
+.clear-btn-style{
+    background: none repeat scroll 0 0 transparent;
+    border: medium none;
+    border-spacing: 0;
+    line-height: 1.42rem;
+    list-style: none outside none; 
+    text-align: left;
+    text-decoration: none;
+    text-indent: 0;
+}
+
+.clear-focus-style{
+    background-image: none;
+    outline: 0;
+    -webkit-box-shadow: none;
+    box-shadow: none;
+}
+
+// Links still have blue border. 
+*:focus{
+    @extend .clear-focus-style;
+}
+
+button{
+    border-color: transparent;
+}
+/////////////////////
+// PRIMARY BUTTONS //
+/////////////////////
+.btn-primary {
+    @extend .clear-btn-style;
+    @include text($font-med, #fff);
+    background-color: $blue-main;
+    border-color: $blue-main;
+    border-radius: 0px;
+    padding: 13px 20px;
+    & > .material-icons {
+        font-size: 19px;
+        vertical-align: -20%;
+    }
+    &:hover{
+        color: #fff;
+        background-color: $blue-dark;
+        border-color: $blue-dark;
+        cursor: pointer;
+    }
+    &:focus {
+        @extend .clear-focus-style;
+        background-color: $blue-black;
+    }
+}
+
+.btn-primary-two {
+    @extend .clear-btn-style;
+    @include text($font-med,$blue-main, 600);
+    background-color: $yellow-main;
+    border-color: $yellow-main;
+    border-radius: 0px;
+    padding: 13px 20px;
+    & > .material-icons {
+        font-size: 19px;
+        vertical-align: -20%;
+    }
+    &:hover{
+        color: $blue-main;
+        background-color: $yellow-light;
+        border-color: $yellow-light;
+        cursor: pointer;
+    }
+    &:focus {
+        @extend .clear-focus-style;
+        background-color: $yellow-white;
+    }
+}
+
+.btn-primary-cancel {
+    @extend .clear-btn-style;
+    @include text($font-med, $font-light);
+    -webkit-box-shadow:inset 0px 0px 0px 2px $font-light;
+    -moz-box-shadow:inset 0px 0px 0px 2px $font-light;
+    box-shadow:inset 0px 0px 0px 2px $font-light;
+    background-color: transparent;
+    // border: $font solid 2px;
+    border-radius: 0px;
+    padding: 13px 20px;
+    & > .material-icons {
+        font-size: 19px;
+        vertical-align: -20%;
+    }
+    &:hover{
+        color: $gray-dark;
+        background-color: transparent;
+        -webkit-box-shadow:inset 0px 0px 0px 2px $gray-dark;
+        -moz-box-shadow:inset 0px 0px 0px 2px $gray-dark;
+        box-shadow:inset 0px 0px 0px 2px $gray-dark;
+        cursor: pointer;
+    }
+    &:focus {
+        @extend .clear-focus-style;
+        -webkit-box-shadow:inset 0px 0px 0px 2px $gray-dark;
+        -moz-box-shadow:inset 0px 0px 0px 2px $gray-dark;
+        box-shadow:inset 0px 0px 0px 2px $gray-dark;
+    }
+}
+//DISABLED
+.btn-primary.disabled, .btn-primary:disabled {
+    background-color: $gray-dark;
+    border-color: $gray-dark;
+    color: $font;
+}
+.btn.disabled, .btn:disabled {
+    cursor: not-allowed;
+    opacity: .65;
+}
+
+//////////////////
+// FLAT BUTTONS //
+//////////////////
+.btn-flat{
+    @extend .clear-btn-style;
+    position: relative;
+     margin: 0px 10px 0px 10px;
+     -webkit-transition: color .5s; /* For Safari 3.0 to 6.0 */
+     transition: color .5s; /* For modern browsers */
+    .material-icons{
+        @include placement(absolute,8px, null, null, -11px);
+        font-size: $f-18px;
+    }
+}
+
+
+.btn-flat-white{
+    @include text($font-med, #fff, 700);
+    padding: 5px 10px;
+    &:hover{
+        color: $yellow-main;
+        cursor:pointer;
+    }
+    &:focus {
+        @extend .clear-focus-style;
+        color: $yellow-main;
+    }
+}
+
+.btn-flat-blue{
+    @include text($font-med, $blue-main, 700);
+    padding: 5px 10px;
+    &:hover{
+        color: $yellow-main;
+        cursor:pointer;
+    }
+    &:focus {
+        @extend .clear-focus-style;
+        color: $yellow-main;
+    }
+}
+
+// keep disabled under blue and white.
+.btn-flat-disabled{
+    @include text($font-med, $gray-dark, 700);
+    padding: 5px 10px;
+    &:hover{
+        color: $gray-dark;
+        cursor:pointer;
+    }
+    &:focus {
+        @extend .clear-focus-style;
+        color: $gray-dark;
+    }
+}
+
+///////////////////
+// ROUND BUTTONS //
+///////////////////
+.btn-round {
+    background-color: $yellow-main;
+    border-radius: 999em;
+    @include square( 56px);
+    box-shadow: 0 2px 5px 0 rgba(0, 0, 0, 0.26);
+    line-height: 1;
+    font-size: 36px;
+    position: relative;
+    cursor: pointer;
+    &:hover{
+        background-color: lighten( $yellow-main, 10% )
+    }
+}
+
+.btn-round span {
+    @include text(33px, #fff);
+    @include placement(absolute, 60%, null, null, 0px);
+    @include size(100%, 100%);
+    text-align: center;
+    margin-top: -22px;
+    
+}
+
+.btn-round-sm {
+    @extend .clear-btn-style;
+    margin:5px;
+    background-color: $yellow-main;
+    border-radius: 999em;
+    @include square(30px);
+    box-shadow: 0 2px 5px 0 rgba(0, 0, 0, 0.26);
+    line-height: 1;
+    font-size: 36px;
+    position: relative;
+    cursor: pointer;
+    &:hover{
+        background-color: $yellow-light;
+    }
+}
+
+.btn-round-sm i {
+    @include text(20px, #fff);
+    @include placement(absolute, 91%, null, null, 0px);
+    @include square(100%);
+    text-align: center;
+    margin-top: -22px;
+}
+
+////////////////////
+// FORMAT CONTROL //
+////////////////////
+ts-format-control{
+    &:focus
+    &:active{
+         @extend .clear-focus-style;
+    }
+}
+.format-control {
+    display: flex;
+    -moz-transition: background .2s ease-in;
+    -o-transition: background .2s ease-in;
+    -webkit-transition: background .2s ease-in;
+    transition: background .2s ease-in;
+    background: transparent; 
+    padding: 8px;
+    margin: 2px 0px 3px 0px;
+    border-radius: 0px;
+    &-lite{
+        &:hover{
+            color: $black;
+            cursor: pointer;
+            background: $gray-light;
+        }
+    }
+    &-dark{
+        color: #fff;
+        &:hover{
+            color: $yellow-main;
+            cursor: pointer;
+            background: $light-blue;
+        }
+    }
+}
+.format-control-no-label{
+    @include square(40px);
+     border-radius: 20px;
+}
+
+.format-control-large{
+    @include square(64px);
+     border-radius: 33px;
+     & > .material-icons{
+         font-size: 48px;
+     }
+}
+
+//////////////////
+// PILL BUTTONS //
+//////////////////
+.btn-pill {
+    @extend .clear-btn-style;
+    @include text($f-14px, $font);
+    background-color: $gray-light;
+    border-color: $blue-main;
+    border-radius: 20px;
+    padding: 5px 10px 6px 10px;
+    position: relative;
+    margin:5px;
+    & > .material-icons {
+        font-size: 19px;
+        vertical-align: -20%;
+    }
+    &:hover{
+        color: #fff;
+        background-color: $blue-dark;
+        border-color: #E0E0E0;;
+        cursor: pointer;
+    }
+    &:focus {
+        @extend .clear-focus-style;
+        background-color: $blue-black;
+    }
+    //May not need title
+    &-title{
+        /*@include placement(absolute, 2px, null, null, 19px);*/
+        font-size: $f-12px;
+    }
+    &-contents{
+        /* max-width: 120px;*/
+         max-width: 240px;
+         text-overflow: ellipsis;
+         white-space: nowrap;
+         overflow: hidden;
+         margin-right: 5px;
+    }
+}
+
+/////////////////
+// INFO BUTTON //
+/////////////////
+.info-btn{
+    color: $blue-main;
+    padding: 0px 8px 0px 8px;
+    &:hover{
+        color: $yellow-main;
+        cursor: pointer;
+    }
+}
+
+/////////////////
+// BACK BUTTON //
+/////////////////
+.back-button {
+    position: relative;
+    color: $blue-main;
+    @include square(40px);
+    border-radius: 20px;
+    border: 2px $blue-main solid;
+    background: transparent;
+    padding: 6px;
+    margin: 2px 10px 3px 0px;
+    &:hover{
+        border: 2px $blue-dark solid;
+        color: $blue-dark;
+        cursor: pointer;
+    }
+    &::after {
+        font-family: "Material Icons";
+        content: "\E5CB";
+        font-size: $f-28px;
+        @include placement(absolute,-3px,null,null,3px);
+    }
+}

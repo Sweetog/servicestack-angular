@@ -1,0 +1,11 @@
+<div class="group" *ngIf="validator">  
+    <div class="select-container">
+        <ng-content></ng-content>
+        <label class="control-label" for="select">{{label}} <span *ngIf="validator && validator.required" class="red">*</span></label><i class="bar"></i>
+         <!-- error message -->
+        <span class="help-block" *ngIf="validator.hasError">
+            <p class="error-block" *ngFor="let message of validator.messages">{{ message }}</p>
+        </span>
+    </div>
+</div>
+

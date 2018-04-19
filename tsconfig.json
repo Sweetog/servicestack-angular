@@ -1,0 +1,19 @@
+{
+    "compilerOptions": {
+        "target": "es5", //most browsers currently understand this version of Javascript
+        "experimentalDecorators": true, //Angular2 uses Component,Injectable etc
+        "emitDecoratorMetadata": true, //Required for Angular2 to use the metadata in our components
+        //"sourceMap": true
+        "types": [
+            "node",
+            "jasmine"
+        ],
+        // "typeRoots": [
+        //     "node_modules/@types"
+        // ],
+        "lib" : ["es2015", "es2015.iterable", "dom"]
+    },
+    "exclude": [
+        "node_modules"
+    ]
+}

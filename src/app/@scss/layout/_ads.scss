@@ -1,0 +1,20 @@
+.banner{
+    min-width: 728px;
+    min-height: 90px;
+    background:lightgray;
+}
+
+.skycontainer{
+    max-width: 250px;
+    text-align: center;
+}
+
+.sky{
+    margin-bottom: 20px;
+}
+
+@include med-window {
+    .skycontainer, .banner {
+        display: none;
+    }
+}

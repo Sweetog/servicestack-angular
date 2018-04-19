@@ -1,0 +1,114 @@
+<form role="form" (submit)="submit()" [formGroup]="contactForm">
+
+    <!-- FIRST NAME  -->
+    <div class="flex">
+        <ts-form-field 
+            type="light" 
+            label="First Name" 
+            class="col field-full-width" 
+            [validator]="firstNameValidator">
+            <input 
+                [formControlName]="firstNameValidator.controlName" 
+                type="text" 
+                class="form-field light-field" 
+                required>
+        </ts-form-field>
+    </div>
+
+    <!-- LAST NAME  -->
+    <div class="flex">
+        <ts-form-field 
+            type="light" 
+            label="Last Name" 
+            class="col field-full-width" 
+            [validator]="lastNameValidator">
+            <input 
+                [formControlName]="lastNameValidator.controlName" 
+                type="text" 
+                class="form-field light-field" 
+                required>
+        </ts-form-field>
+    </div>
+
+    <!-- EMAIL  -->
+    <div class="flex">
+        <ts-form-field 
+            type="light" 
+            label="Email" 
+            class="col field-full-width" 
+            [validator]="emailValidator">
+            <input 
+                [formControlName]="emailValidator.controlName" 
+                type="text" 
+                class="form-field light-field" 
+                required>
+        </ts-form-field>
+    </div>
+
+    <!-- COMPANY  -->
+    <div class="flex">
+        <ts-form-field 
+            type="light" 
+            label="Company" 
+            class="col field-full-width" 
+            [validator]="companyValidator">
+            <input 
+                [formControlName]="companyValidator.controlName" 
+                type="text" 
+                class="form-field light-field" 
+                required>
+        </ts-form-field>
+    </div>
+
+    <!-- PHONE NUMBER  -->
+    <div class="flex">
+        <ts-form-field 
+            type="light" 
+            label="Phone Number" 
+            class="col field-full-width" 
+            [validator]="phoneNumberValidator">
+            <input 
+                [formControlName]="phoneNumberValidator.controlName" 
+                type="text" class="form-field light-field" 
+                required>
+        </ts-form-field>
+    </div>
+
+    <!-- SEND MESSAGE TO  -->
+    <div class="flex">
+        <ts-select-field 
+            label="Send Message To"  
+            class="col-12 field-full-width"
+            [validator]="sendMessageToValidator">
+            <select required [formControlName]="sendMessageToValidator.controlName">
+                        <option value="" disabled selected >Select whom to send message</option>
+                        <option value="21">Customer Care</option>
+                        <option value="20">Manufacturer Support</option>
+                        <option value="22">Sales</option>
+                        <option value="26">Supplier Exchange Support</option>
+                    </select>
+        </ts-select-field>
+    </div>
+
+     <!-- Message  -->
+     <div class="flex">
+        <ts-form-field 
+            type="light" 
+            label="Message" 
+            class="col field-full-width" 
+            [validator]="messageValidator">
+            <input 
+                [formControlName]="messageValidator.controlName" 
+                type="text" 
+                class="form-field light-field" 
+                maxLength>
+        </ts-form-field>
+    </div>
+
+
+    <div class="flex-end margin-top-40 margin-bottom-20">
+
+    </div>
+
+
+</form>

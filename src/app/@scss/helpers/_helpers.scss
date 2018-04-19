@@ -1,0 +1,442 @@
+///////////////////
+// GLOBAL HELPERS//
+///////////////////
+.cursor-pointer{
+    cursor: pointer;
+}
+
+.hidden{
+    display: none!important;
+}
+
+.margin{
+    &-top{
+        &-40{
+            margin-top: 40px;
+        }
+        &-30{
+            margin-top: 30px;
+        }
+        &-20{
+            margin-top: 20px;
+        }
+        &-15{
+            margin-top:15px;
+        }
+        &-10{
+            margin-top: 10px;
+        }
+        &-5{
+            margin-top: 5px;
+        }
+        &-2{
+            margin-top: 2px!important;
+        }
+        &-0{
+            margin-top: 0px!important;
+        }
+    }//top
+    &-bottom{
+        &-40{
+            margin-bottom: 40px;
+        }
+        &-30{
+            margin-bottom: 30px;
+        }
+        &-20{
+            margin-bottom: 20px;
+        }
+        &-15{
+            margin-bottom:15px;
+        }
+        &-10{
+            margin-bottom: 10px;
+        }
+        &-5{
+            margin-bottom: 5px;
+        }
+        &-0{
+            margin-bottom: 0px!important;
+        }
+    }//bottom
+    &-right{
+        &-50{
+            margin-right: 50px;
+        }
+        &-40{
+            margin-right: 40px;
+        }
+        &-30{
+            margin-right: 30px;
+        }
+        &-20{
+            margin-right: 20px;
+        }
+        &-15{
+            margin-right:15px;
+        }
+        &-10{
+            margin-right: 10px;
+        }
+         &-5{
+            margin-right: 5px;
+        }
+    }//right
+    &-left{
+        &-40{
+            margin-left: 40px;
+        }
+        &-30{
+            margin-left: 30px;
+        }
+        &-20{
+            margin-left: 20px;
+        }
+        &-15{
+            margin-left:15px;
+        }
+        &-10{
+            margin-left: 10px;
+        }
+         &-5{
+            margin-left: 5px;
+        }
+    }//left
+}
+
+.padding{
+    &-top{
+        &-40{
+            padding-top: 40px;
+        }
+        &-30{
+            padding-top: 30px;
+        }
+        &-20{
+            padding-top: 20px;
+        }
+        &-15{
+            padding-top:15px;
+        }
+        &-10{
+            padding-top: 10px;
+        }
+        &-5{
+            padding-top: 5px;
+        }
+    }//top
+    &-bottom{
+        &-40{
+            padding-bottom: 40px;
+        }
+        &-30{
+            padding-bottom: 30px;
+        }
+        &-20{
+            padding-bottom: 20px;
+        }
+        &-15{
+            padding-bottom:15px;
+        }
+        &-10{
+            padding-bottom: 10px;
+        }
+         &-5{
+            padding-bottom: 5px;
+        }
+    }//bottom
+    &-right{
+        &-40{
+            padding-right: 40px;
+        }
+        &-30{
+            padding-right: 30px;
+        }
+        &-20{
+            padding-right: 20px;
+        }
+        &-15{
+            padding-right:15px;
+        }
+        &-10{
+            padding-right: 10px;
+        }
+         &-5{
+            padding-right: 5px;
+        }
+    }//right
+    &-left{
+        &-40{
+            padding-left: 40px;
+        }
+        &-30{
+            padding-left: 30px;
+        }
+        &-20{
+            padding-left: 20px;
+        }
+        &-15{
+            padding-left:15px;
+        }
+        &-10{
+            padding-left: 10px;
+        }
+        &-5{
+            padding-left: 5px;
+        }
+        &-0{
+            padding-left: 0px !important;
+        }
+    }//left
+}
+.margin-0{
+    margin:0px!important;
+}
+.padding-15{
+    padding:15px;
+}
+.padding-5{
+    padding:5px;
+}
+.padding-40{
+    padding:40px;
+}
+.padding-0{
+    padding:0px!important;
+}
+
+.field{
+    &-full-width{
+        padding-right:0px;
+        padding-left:0px;
+    }
+    &-left{
+        padding-left:0px;
+        // this is assuming that these inputs will 
+        // become full width under med-window width.
+        @include med-window{
+            padding-right:0px;
+        }
+    }
+    &-right{
+        padding-right:0px;
+        // this is assuming that these inputs will 
+        // become full width under med-window width.
+        @include med-window{
+            padding-left:0px;
+        }
+    }
+    &-center{
+        @include med-window{
+            padding-right:0px;
+            padding-left:0px;
+        }
+    }
+}
+
+
+//FLEX MEDIA QUERIES
+
+/**
+Under 767px
+This Class will make the element display flex untill 
+it hits the 767px mark, everything under that it will
+change the column. 
+**/
+.flex-col-md{
+    display: flex;
+    @include med-window{
+        flex-direction: column;
+    }
+}
+/**
+Under 992px
+This Class will make the element display flex untill 
+it hits the 992px mark, everything under that it will
+change the column. 
+**/
+.flex-col-lrg{
+    display: flex;
+    @include lrg-window{
+        flex-direction: column;
+    }
+}
+/**
+Under 992px
+This Class will make the element display flex untill 
+it hits the 992px mark, everything under that it will
+change the column. 
+**/
+.flex-col-xl{
+    display: flex;
+    @include xl-window{
+        flex-direction: column;
+    }
+}
+
+
+.flex-end-col-lrg{
+    @include lrg-window{
+        display: flex;
+        justify-content: flex-end;
+    }
+}
+.relative{
+    position: relative;
+}
+.absolute{
+    position: absolute;
+}
+.flex{
+    display: flex;
+}
+.flex-col{
+    display: flex;
+    flex-direction: column;
+}
+.flex-center{
+    display: flex;
+    justify-content: center;
+    width: 100%;
+}
+.flex-middle{
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+.flex-wrap{
+    @extend .flex;
+    flex-wrap: wrap;
+}
+.flex-end{
+    display: flex;
+    justify-content: flex-end;
+}
+.flex-align-items{
+    display: flex;
+    align-items: center;
+}
+.flex-space-between{
+    @extend .flex;
+    justify-content: space-between;
+}
+.none{
+    display: none;
+}
+.text-align-center{
+    text-align: center;
+}
+.height-100{
+    height: 100%;
+}
+.width-100{
+    width: 100%;
+}
+.width-200{
+    width:200px;
+}
+.bold{
+    font-weight: 800!important;
+}
+.semi-bold{
+    font-weight: 600!important;
+}
+.regular{
+    font-weight: 400!important;
+}
+.thin{
+    font-weight: 300!important;
+}
+.size-18{
+    font-size: $f-18px;
+}
+.size-16{
+    font-size: $f-16px;
+}
+.size-14{
+    font-size: $f-14px;
+}
+.size-12{
+    font-size: $f-12px;
+}
+.inherit{
+    position: inherit!important;
+}
+
+/////////////////////////////
+// BACKGROIND MAIN COLORS. //
+/////////////////////////////
+ 
+.orange-background{
+    background:$orange-main;
+}
+.blue-background{
+    background:$blue-main;
+}
+.yellow-background{
+    background:$yellow-main!important;
+}
+.light-blue-background{
+    background:$light-blue;
+}
+.green-background{
+    background: $green-success;
+}
+.orange-background{
+    background:$orange-main;
+}
+.gray-background{
+    background:$page-backdrop!important;
+}
+
+///////////////////////
+// TEXT MAIN COLORS. //
+///////////////////////
+.orange{
+    color:$orange-main!important;
+}
+.blue{
+    color:$blue-main!important;
+}
+.blue-light{
+    color:$light-blue!important;
+}
+.yellow{
+    color:$yellow-main!important;
+}
+.white{
+    color:white!important;
+}
+.red{
+    color: $red;
+}
+.gray{
+    color:$gray-dark;
+}
+.green{
+   color:$green-success;
+}
+.ellipsis{
+    @include ellipsis(100%);
+}
+
+.blue-graph{
+    color:$blue-graph;
+}
+
+.yellow-graph{
+    color:$yellow-graph;
+}
+
+.f20{
+    font-size: $f-20px;
+}
+
+//image structure
+.base-line{
+    vertical-align: baseline;
+}
+
+.hr-blue{
+    border-top: 1px $blue-main solid;
+}

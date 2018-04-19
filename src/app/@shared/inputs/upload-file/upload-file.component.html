@@ -1,0 +1,4 @@
+<div class="flex-align-items" >
+        <div class="btn-round-sm"><i class="material-icons">file_upload</i></div>
+        <span *ngIf="!uploadedFile">NO FILE CHOSEN</span><div placement="top" ngbTooltip="{{uploadedFile}}" class="uploaded-file" *ngIf="uploadedFile">FILE - {{uploadedFile}}</div>
+</div>

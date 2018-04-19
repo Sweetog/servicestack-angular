@@ -1,0 +1,23 @@
+{
+    "services": {
+        "account": "https://account.tradeservice.com",
+        "auth": "https://auth.tradeservice.com",
+        "item": "https://item.tradeservice.com",
+        "search":"https://search.tradeservice.com",
+        "distributor":"https://distributor.tradeservice.com",
+        "bom":"https://bom.tradeservice.com",
+        "manufacturer":"https://manufacturer.tradeservice.com",
+        "customprice":"https://customprice.tradeservice.com",
+        "correspondence":"https://correspondence.tradeservice.com",
+        "commodity":"https://commodity.tradeservice.com",
+        "contractor":"https://contractor.tradeservice.com",
+        "logging":"https://logging.tradeservice.com",
+        "advertising":"https://advertising.tradeservice.com",
+        "companyprofile":"https://companyprofile.tradeservice.com",
+        "content":"https://content.tradeservice.com"
+
+    },
+    "isDevelopment": false,
+    "isStaging": false,
+    "isProduction": true
+}

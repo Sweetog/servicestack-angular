@@ -1,0 +1,42 @@
+<div [style.background-image]="background" class="login-page-container">
+    <!-- Note: .main-container-child gives a global padding to the view. -->
+    <div class="login-container">
+
+        <div class="login-container-left">
+            <img class="login-logo" [src]="trimbleLogo" alt="Logo">
+        </div>
+
+
+        <div class="login-container-right">
+            <div class="login-form white">
+                <h1 class="login-title">Not Authorized</h1>
+                <div>Please Contact Customer Service</div>
+
+                <!-- Developer Information-->
+                <div *ngIf="!isProduction">
+                    <br />
+                    <br />
+                    <h1 class="login-title">Dev info:</h1>
+
+                    <div *ngIf="missingEntitlementIsKnown; else missingEntitlementUnknown">
+                        Product Or Product Feature Entitlement or User Role user is missing:
+                        <br />
+                        <br />
+                        <strong>{{devDisplayText}}</strong>
+                    </div>
+                    <ng-template #missingEntitlementUnknown>
+                        <div>
+                            The entitlement enforcement was done on the backend and the exact missing entitlement for the user is not known. This is
+                            not a bug, the frontend needs to check the entitlement as well. Then we will know what Product
+                            or Product Feature that the user does not have so that Customer Support can be probably notified.
+                            Or the right upsell page can be displayed
+                        </div>
+                    </ng-template>
+                </div>
+
+            </div>
+        </div>
+
+    </div>
+    <!-- main-container-child -->
+</div>

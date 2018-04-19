@@ -1,0 +1,11 @@
+
+
+<!-- Consistent Lite Gray Background. ( in App ) -->
+<div *ngIf="currentUserService.isLoggedIn && currentUserService.licenseAgreement" class="back-drop"></div>
+
+<router-outlet>
+    <div *ngIf="showLoader" class="loader-overlay"></div>
+    <span *ngIf="showLoader" class="loader"></span>
+</router-outlet>
+
+

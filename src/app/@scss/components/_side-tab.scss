@@ -1,0 +1,25 @@
+.side-tab{
+    background: $blue-main;
+    @include size (72px, 64px);
+    @include placement(absolute, 33% ,0px,null,null);
+    @extend .flex-align-items;
+    padding-left:10px;
+    color:#ffffff;
+    &:hover{
+        background: $light-blue;
+        cursor: pointer;
+    }
+    @include med-window {
+        & {
+            display: none;
+        }
+    }
+    & > i {
+        font-size: 50px; 
+    }
+    &-content{
+        white-space: nowrap;
+        width: 100%;
+        margin-left: 10px;
+    }
+}

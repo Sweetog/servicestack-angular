@@ -1,0 +1,198 @@
+// Some anchors will not have an href
+a:not([href]):not([tabindex]){
+    color:$blue-main;
+    &:hover{
+        color: $blue-dark;
+        cursor: pointer;
+    }
+}
+
+
+//////////////
+// Main Nav //
+//////////////
+
+
+.navbar-fixed-top {
+    top: 0;
+    border-width: 0 0 1px;
+    z-index: 1030;
+}
+.navbar-fixed-bottom, 
+.navbar-fixed-top {
+    position: fixed;
+    right: 0;
+    left: 0;  
+}
+
+.main-nav-links{
+    //removes drop-down carrot.
+    .dropdown-toggle::after{
+        content: none;
+    }   
+}
+
+.dropdown-menu-right {
+    right: 0;
+    left: auto!important;
+} 
+
+
+.navbar-brand {
+    display: inline-block;
+    padding-top: 8px;
+    padding-bottom: .25rem;
+    margin-right: 1rem;
+    font-size: 1.25rem;
+    line-height: inherit;
+    white-space: nowrap;
+    padding-left: 0px;
+}
+
+//This clears the self inposed dropdown
+//carrot that bootstrap appends.
+.dropdown-toggle::after {
+    display: none;
+}
+.dropdown-item{
+    display: flex;
+    align-items: center;
+    justify-content: flex-start;
+    
+    @include text($f-16px,$font);
+    & > i {
+        font-size: $f-14px;
+    }
+}
+.dropdown-menu {
+    min-width: 14rem;
+    border-radius:0px; 
+    @include card-shadow();
+}
+.dropdown-item.active, .dropdown-item:active {
+    color: #fff;
+    text-decoration: none;
+    background-color: $blue-main;
+}
+// Pop overs where displaing only one word
+// width so setting a min width to them. 
+.popover{
+    min-width: 150px;
+    color: $font;
+}
+
+
+@media (min-width: 768px){
+    .navbar-fixed-bottom, .navbar-fixed-top {
+        border-radius: 0;
+    }
+}
+
+
+.card{
+    border-radius: 0px;
+}
+
+//////////
+// Tabs //
+//////////
+.nav-tabs {
+    background-color: $blue-main;
+    border-bottom: 1px $blue-main solid;
+    @include lrg-window{
+        display: block;
+    }
+    .nav-item{
+        overflow: hidden;
+        
+    }
+    .nav-link{
+        background-color: $blue-main;
+        color:#fff;
+        font-size: $f-14px;
+        font-weight: 600;
+        padding: 13px 15px 13px 15px;
+        @include med-window{
+             border-bottom: 2px #00437B solid;
+        }
+        overflow: hidden;
+        white-space: nowrap;
+        text-overflow: ellipsis;
+        &:hover{
+            color:$yellow-main;
+            border-color: $blue-main;
+            @include med-window{
+                border-bottom: 2px #00437B solid;
+            }
+        }
+        &.active{
+            color:$blue-main;
+            border-color: #fff!important;
+            border-top-right-radius: 0px;
+            border-top-left-radius: 0px;
+            &:hover{
+                color:$yellow-main;
+            }
+        }
+    }
+}
+
+
+//MOVE THIS TO A MATERIAL FOLDER ABD OUT OF THE BOOTSTRAP FOLDER
+
+/////////////////////
+// Matierl Angylar //
+/////////////////////
+/* when in a modal the select box need to be higher in the
+   z-index to be seen over the modal . */
+.cdk-overlay-container {
+    z-index:1050!important;
+}
+
+.mat-select-trigger {
+    margin-top: 27px;
+    display: flex;
+    align-items: center;
+    height: 30px;
+    min-width: 112px;
+    cursor: pointer;
+    position: relative;
+    box-sizing: border-box;
+}
+
+.mat-select:focus:not(.mat-select-disabled).mat-primary 
+.mat-select-arrow, 
+.mat-select:focus:not(.mat-select-disabled).mat-primary 
+.mat-select-trigger {
+    color: $blue-main;
+}
+
+
+//////////////
+// Tool Tip //
+//////////////
+.tooltip.bs-tooltip-auto[x-placement^=top] .arrow::before, .tooltip.bs-tooltip-top .arrow::before {
+    margin-left: -3px;
+    content: "";
+    border-width: 5px 5px 0;
+    border-top-color:$blue-main;
+}
+.tooltip.bs-tooltip-auto[x-placement^=left] .arrow::before, .tooltip.bs-tooltip-left .arrow::before {
+    border-left-color:$blue-main;
+}
+.tooltip.bs-tooltip-auto[x-placement^=right] .arrow::before, .tooltip.bs-tooltip-right .arrow::before {
+    border-left-color:$blue-main;
+}
+.tooltip.bs-tooltip-auto[x-placement^=bottom] .arrow::before, .tooltip.bs-tooltip-bottom .arrow::before {
+    border-left-color:$blue-main;
+}
+.tooltip-inner {
+    min-width: 220px;
+    padding: 3px 8px;
+    color: #fff;
+    text-align: center;
+    background-color: $blue-main;
+    border-radius: .25rem;
+}
+
+

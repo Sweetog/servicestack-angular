@@ -1,0 +1,71 @@
+<div [style.background-image]="background" class="login-page-container">
+    <div class="login-container" >
+            <div class="login-container-left">
+                <img class="login-logo" [src]="trimbleLogo" alt="Logo">
+                <div class="text-align-center width-100">
+                    <div class="login-welcome">Welcome To <span class="regular">Trade Service</span></div>
+                    <div class="white">Log in to access your account or create one today</div>
+                    <div class="margin-top-30">
+
+                        </div>
+                </div>
+
+            </div>
+            <div class="login-container-right">
+                    <div class="login-form">
+                            <h2 class="login-title">LOGIN</h2>
+                            <div *ngIf="isDevelopment" class="white"><strong>Username: steve_harding@tradeservice.com</strong></div>
+                            <div *ngIf="isDevelopment" class="white"><strong>Password: Hkiwt2muhm</strong></div> 
+                            <form role="form" (submit)="submit()" [formGroup]="form">
+                                
+                
+                                <!--USER NAME INPUT  -->
+                                <ts-form-field 
+                                    type="dark" 
+                                    label="Username" 
+                                    class="col-sm-12" 
+                                    [validator]="usernameValidator">
+                                    <input
+                                        type="text" 
+                                        #UserNameInput 
+                                        class="form-field dark-field" 
+                                        [formControlName]="usernameValidator.controlName" />
+                                </ts-form-field>
+                
+                                <!--PASSWORD INPUT-->
+                                <ts-form-field 
+                                    type="dark" 
+                                    label="Password" 
+                                    class="col-sm-12"
+                                    [validator]="passwordValidator"
+                                    [error]="loginError">
+                                    <input 
+                                        type="password" 
+                                        class="form-field dark-field" 
+                                        [formControlName]="passwordValidator.controlName" />
+                                </ts-form-field>
+
+                                <div class="flex">
+                                    <a (click)="forgotPasswordClick()" class="login-link margin-right-15">Forgot Password</a>
+                                    <a (click)="contactClick()" class="login-link">Contact Us</a>
+                                </div>
+                
+                                <!--SUBMIT BUTTON-->
+                                <div class="flex-end margin-top-30">
+
+                                </div>
+                            </form>
+                        </div>
+
+                        <a class="login-copyright col-md-4 col-10" href="http://www.trimble.com/Corporate/Copyrights.aspx" target="blank">
+                                    Copyright© 2008-2018 Trade Service, A Trimble Company. All rights reserved.
+                        </a>
+                        
+            </div>
+    </div>
+    
+</div>
+
+
+
+

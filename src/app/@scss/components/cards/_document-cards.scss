@@ -1,0 +1,22 @@
+////////////////////
+// DOCUMENT CARDS //
+////////////////////
+.card-body{
+    // flex:0;
+    // clashed with IE 11
+    padding:0px 
+}
+
+.document-card{
+    width: 190px;
+    margin: 10px;
+    padding: 9px;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    &-title{
+        @include text($f-14px, inherit, inherit);
+        margin-bottom: 10px;
+    }
+}

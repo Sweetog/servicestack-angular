@@ -1,0 +1,103 @@
+.bom{
+
+    // BOM Page Cards
+    &-card{
+        margin: 5px;
+        width: 250px;
+        height: 100px;
+        padding: 5px 10px 5px 10px;
+        transition: box-shadow 1s;
+        &:hover{
+            @include card-shadow-hover;
+            cursor: pointer;
+        }
+        &-sub-info{
+            padding-top: 10px;
+            font-size: $f-12px;
+        }
+        &-new{
+            display: flex;
+            justify-content: center;
+            align-items: center;
+            border-left: 5px solid $light-blue;
+        }
+        &-folder{
+            border-left: 5px solid $orange-main;
+        }
+        &-bom{
+            border-left: 5px solid $yellow-main;
+        }
+        &-title{
+            @include ellipsis(190px);
+        }
+    }
+
+    // BOM Page List View
+    &-list{
+        margin: 5px;
+        @include size(auto, 75px);
+        padding: 5px 10px 5px 10px;
+        transition: box-shadow 1s;
+        &-body{
+            margin-left: 100px;
+        }
+        &-menu{
+            @include placement(absolute, 5px, 8px);
+        }
+        &-public{
+            color:#fff;
+            background-color: $light-blue;
+            padding: 5px 5px 0px 5px;
+            border-radius: 20px;
+            @include placement(absolute, 3px, -14px, null, null);
+             & > i {
+                 font-size: $f-20px;
+             }
+        }
+        &-icon{
+            @include square(73px);
+            @include placement(absolute,0px, null, null, 0px);
+            @include flex-center();
+            & > i {
+                font-size: 50px;
+                color: #fff;
+            }
+        }
+        &:hover{
+            @include card-shadow-hover;
+            cursor: pointer;
+        }
+        &-sub-info{
+            padding-top: 10px;
+            font-size: $f-12px;
+        }
+        &-new{
+            @include flex-center();
+            &-icon{
+                background-color: $light-blue;
+            }
+        }
+        &-folder{
+            &-icon{
+                background-color: $orange-main;
+            }
+        }
+        &-bom{
+            &-icon{
+                background-color: $yellow-main;
+            }
+        }
+    }
+
+    &-effective-date{
+        &-container{
+            // height: 200px;
+        }
+    }
+    &-details-head-container{
+        padding: 15px;
+        min-height: 226px
+    }
+
+}// end .bom
+

@@ -1,0 +1,30 @@
+{
+    "services": {
+        "account": "https://account.staging.tradeservice.com",
+        "auth": "https://auth.staging.tradeservice.com",
+        "item": "https://item.staging.tradeservice.com",
+        "search":"https://search.staging.tradeservice.com",
+        "distributor":"https://distributor.staging.tradeservice.com",
+        "bom":"https://bom.staging.tradeservice.com",
+        "manufacturer":"https://manufacturer.staging.tradeservice.com",
+        "customprice":"https://customprice.staging.tradeservice.com",
+        "correspondence":"https://correspondence.staging.tradeservice.com",
+        "commodity":"https://commodity.staging.tradeservice.com",
+        "contractor":"https://contractor.staging.tradeservice.com",
+        "logging":"https://logging.staging.tradeservice.com",
+        "advertising":"https://advertising.staging.tradeservice.com",
+        "companyprofile":"https://companyprofile.staging.tradeservice.com",
+        "content":"https://content.staging.tradeservice.com"
+    },
+    "urls": {
+        "analytics": "https://qa.tradeserviceonline.com/WebSites/TradeServiceOnline/Analytics/Default.aspx?s=1&ip=12",
+        "eDataFlexBulletinSummary": "https://qa.tradeserviceonline.com/WebSites/TradeServiceOnline/eDataFlex/BulletinSummary.aspx?s=1&ip=9",
+        "eDataFlexUploadDownload": "https://qa.tradeserviceonline.com/WebSites/TradeServiceOnline/eDataFlex/UploadDownload.aspx?s=1&ip=9",
+        "submittalManager": "https://qa.tradeserviceonline.com/WebSites/TradeServiceOnline/Submittals/SubmittalsHome.aspx?s=1&ip=15",
+        "tsoExpectedOrigin": "https://qa.tradeserviceonline.com",
+        "imageServerBase": "https://images.tradeservice.com"
+    },
+    "isDevelopment": false,
+    "isStaging": true,
+    "isProduction": false
+}

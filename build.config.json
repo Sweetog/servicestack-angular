@@ -1,0 +1,29 @@
+{
+  "src": "./src/",
+  "dist": "./dist/",
+  "entry": "main.ts",
+  "buildjs": "app.bundle.[hash:6].js",
+  "buildjsmap": "app.bundle.[hash:6].js.map",
+  "buildcss": "bundle.css",
+  "index": "index.html",
+  "port": 8000,
+  "envs": "./envs/",
+  "appConfig": "app.config.{env}.json",
+  "js": [
+    "./src/client/app/**/*.js"
+  ],
+  "vendorcss": [
+    "./node_modules/angularjs-toaster/toaster.scss"
+  ],
+  "css": [
+    "./src/client/app/@scss/style.scss"
+  ],
+  "vendorfonts": [
+    "./node_modules/bootstrap/dist/fonts/**.*"
+  ],
+  "envProduction": "production",
+  "envStaging": "staging",
+  "envDevelopment": "development",
+  "envLocalhost": "localhost",
+  "envTest": "test"
+}

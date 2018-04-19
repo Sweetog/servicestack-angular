@@ -1,0 +1,542 @@
+input[type="radio"],
+input[type="checkbox"]{
+  display: none;
+}
+input:invalid {
+    box-shadow:0 0 0px #fff;
+}
+
+
+
+//Check Box
+.select-card-check-box{
+    margin: 5px;
+} 
+
+
+.checkbox{
+    &-container{
+        padding: 10px 10px 0px 42px;
+        font-size:14px;
+        position: relative;
+        label {
+            position: relative;
+            font-size: $f-16px;
+        }
+        span{
+            &::before,
+            &::after {
+                content: '';
+                @include placement(absolute, 0px, null, 0px, null);
+                margin: auto;
+            } 
+            &.checkbox{
+                 &::after {
+                    top: -9px;
+                    left: -30px;
+                }
+            }
+            &.checkbox-labeled{
+                &::after {
+                    top: 2px;
+                    left: -30px;
+                }
+                & > span{
+                    padding: 0px 3px 0px 3px;
+                }
+            }
+            // long-label': text.length >= 29
+            &.long-label{
+                 &::before {
+                     top:-18px;
+                 }
+            }
+            // long-label': text.length >= 58
+            &.xl-long-label{
+                 &::before {
+                     top: -37px
+                 }
+            }
+            &.checkbox,
+            &.checkbox-labeled{
+                 &::before {
+                    @include square(27px);
+                    position: absolute;
+                    background-color: #fff;
+                    left: -35px;
+                    box-sizing: border-box;
+                    border: 1px solid #999;
+                    transition: border-color .2s;
+                    border-radius: 5px;
+                }
+                &:hover::before {
+                    border: 1px solid $yellow-main;
+                }
+                &::after {
+                    @include icon("\E876");
+                    font-size: $f-16px;
+                    color: transparent;
+                    transition: color .2s;
+                }
+            }
+        }  
+    } 
+    &:hover{
+        cursor:pointer;
+    }
+}
+
+input[type="checkbox"]:checked {
+    & + label span.checkbox::after,
+    & + label span.checkbox-labeled::after {
+        color: $yellow-main;
+    }
+    & + label span.checkbox::before,
+    & + label span.checkbox-labeled::before{
+        border: 1px solid $yellow-main;
+    }
+}
+
+
+//Radio
+// .container label {
+//   position: relative;
+// }
+
+// .container span::before,
+// .container span::after {
+//   content: '';
+//   position: absolute;
+//   top: 0;
+//   bottom: 0;
+//   margin: auto;
+// }
+// .container span.radio:hover {
+//   cursor: pointer;
+// }
+// .container span.radio::before {
+//   left: -52px;
+//   width: 45px;
+//   height: 25px;
+//   background-color: #A8AAC1;
+//   border-radius: 50px;
+// }
+// .container span.radio::after {
+//   left: -49px;
+//   width: 17px;
+//   height: 17px;
+//   border-radius: 10px;
+//   background-color: #6C788A;
+//   transition: left .25s, background-color .25s;
+// }
+// input[type="radio"]:checked + label span.radio::after {
+//   left: -27px;
+//   background-color: #EBFF43;
+// }
+
+
+// Input 
+
+.box-field {
+    position: relative;
+    i{
+        padding: 8px;
+    }
+    input{
+        border: 0;
+        height: 40px;
+        padding: 0 10px 0 10px;
+        font-size: $f-16px;
+        width: 100%;
+        border-radius: 2px;
+        background-repeat: no-repeat;
+        background-position: 10px center;
+        &:focus{
+            outline: none;
+        }
+    }
+    & > .dropdown-menu {
+        min-width: 100%;
+    }
+    &-submit{
+        position: absolute;
+        right: 0px;
+        background: $yellow-main;
+        & :hover{
+            cursor: pointer;
+            background: $yellow-light;
+        }
+    }
+}
+
+.box-field-light{
+    input{
+        background-color: #EDEDEF;
+        color: $font;
+        @include placeholder($font-light); 
+        &:focus{
+            background-color: #E0E0E0;
+        }    
+    }
+    i {
+        color: #fff;
+    }
+}
+
+.box-field-dark{
+    input{
+        background-color: $light-blue;
+        color: #fff;
+        @include placeholder(#fff);
+        &:focus{
+            background-color: $light-blue-light;
+        }
+    }
+    i {
+        color: #fff;
+    }    
+}
+
+
+
+* { box-sizing:border-box; }
+
+/* form starting stylings ------------------------------- */
+
+
+
+.group 			  { 
+  position:relative; 
+  margin-bottom:20px;
+}
+
+input[type="text"].form-field,
+textarea[type="text"].form-field,
+input[type="password"].form-field{
+  background: transparent;
+  font-size:$f-16px;
+  padding: 13px 10px 6px 5px;
+  display:block;
+  width:100%;
+  border:none;
+  margin-top: 15px;
+}
+
+input[type="text"].dark-field,
+textarea[type="text"].dark-field,
+input[type="password"].dark-field{
+  color: #fff;
+  border-bottom:1px solid #fff;
+}
+
+input[type="text"].light-field,
+textarea[type="text"].light-field,
+input[type="password"].light-field{
+  color: $font;
+  border-bottom:1px solid $blue-main;
+}
+
+input[type="text"].form-field:focus ,
+textarea[type="text"].form-field:focus ,
+input[type="password"].form-field:focus		{ outline:none; }
+
+/* LABEL ======================================= */
+label.form-field-label {
+  color:#aeaeaf; 
+  font-size:$f-16px;  
+  font-weight:normal;
+  position:absolute;
+  pointer-events:none;
+  left:5px;
+  top:5px;
+  transition:0.2s ease all; 
+  -moz-transition:0.2s ease all; 
+  -webkit-transition:0.2s ease all;
+}
+
+// for some reason the text area lables are too far left
+// must be overriden. 
+label.text-field-label{
+    left:17px !important
+}
+
+/* active state */
+input[type="text"].form-field:focus ~ label.form-field-label, 
+input[type="text"].form-field:valid ~ label.form-field-label,
+textarea[type="text"].form-field:focus ~ label.form-field-label, 
+textarea[type="text"].form-field:valid ~ label.form-field-label,
+input[type="password"].form-field:focus ~ label.form-field-label, 
+input[type="password"].form-field:valid ~ label.form-field-label {
+  top:-20px;
+  font-size:14px;
+}
+
+/* active state */
+input[type="text"].dark-field:focus ~ label.form-field-label, 
+input[type="text"].dark-field:valid ~ label.form-field-label,
+textarea[type="text"].dark-field:focus ~ label.form-field-label, 
+textarea[type="text"].dark-field:valid ~ label.form-field-label,
+input[type="password"].dark-field:focus ~ label.form-field-label, 
+input[type="password"].dark-field:valid ~ label.form-field-label {
+  color:#fff;
+}
+
+
+/* BOTTOM BARS ================================= */
+.bar-dark, .bar-light 	{ 
+    position:relative; 
+    display:block; 
+    // width:320px; 
+    }
+
+.bar-dark:before, .bar-dark:after,
+.bar-light:before, .bar-light:after {
+  content:'';
+  height:2px; 
+  width:0;
+  bottom:1px; 
+  position:absolute;
+  transition:0.2s ease all; 
+  -moz-transition:0.2s ease all; 
+  -webkit-transition:0.2s ease all;
+}
+.bar-dark:before, .bar-dark:after 	{
+  background:$yellow-main;  
+}
+.bar-light:before, .bar-light:after 	{
+  background:$blue-main; 
+}
+.bar-dark:before, 
+.bar-light:before {
+  left:50%;
+}
+.bar-dark:after, 
+.bar-light:after {
+  right:50%; 
+}
+
+
+/* active state */
+input[type="text"].form-field:focus ~ .bar-dark:before, input:focus ~ .bar-dark:after,
+input[type="text"].form-field:focus ~ .bar-light:before, input:focus ~ .bar-light:after,
+textarea[type="text"].form-field:focus ~ .bar-dark:before, textarea:focus ~ .bar-dark:after,
+textarea[type="text"].form-field:focus ~ .bar-light:before, textarea:focus ~ .bar-light:after,
+input[type="password"].form-field:focus ~ .bar-dark:before, input:focus ~ .bar-dark:after,
+input[type="password"].form-field:focus ~ .bar-light:before, input:focus ~ .bar-light:after {
+  width:50%;
+}
+
+
+/* HIGHLIGHTER ================================== */
+.highlight {
+  position:absolute;
+  height:60%; 
+  width:100px; 
+  top:25%; 
+  left:0;
+  pointer-events:none;
+  opacity:0.5;
+}
+
+
+// this leaves a streak in the text field when focusing into the input.
+/* active state */
+input[type="text"].form-field:focus ~ .highlight,
+textarea[type="text"].form-field:focus ~ .highlight,
+input[type="password"].form-field:focus ~ .highlight {
+  -webkit-animation:inputHighlighter 0.3s ease;
+  -moz-animation:inputHighlighter 0.3s ease;
+  animation:inputHighlighter 0.3s ease;
+}
+
+/* ANIMATIONS ================ */
+@-webkit-keyframes inputHighlighter {
+	from { background:#5264AE; }
+  to 	{ width:0; background:transparent; }
+}
+@-moz-keyframes inputHighlighter {
+	from { background:#5264AE; }
+  to 	{ width:0; background:transparent; }
+}
+@keyframes inputHighlighter {
+	from { background:#5264AE; }
+  to 	{ width:0; background:transparent; }
+}
+
+
+
+////////////
+// SEARCH //
+////////////
+.search-items{
+    &-container{
+        position: relative;
+        display: flex;
+        width: 100%;
+        justify-content: center;
+        .box-field{
+            width: 100%;
+        }
+    }
+}
+.search-suggestion{
+    padding: 20px;
+    overflow-y: scroll;
+    overflow-x: hidden;
+    position: absolute;
+    height: 75vh;
+    max-width:100%;
+    width: 100%;
+    top: 52px;
+    z-index: 100;
+    &-subtitle{
+        @extend .subtitle;
+        margin-bottom: 0px;
+    }
+}
+.search-suggestions{
+    & em {
+        font-weight: bold;
+        font-style: normal;
+    }
+}
+.super-class{
+    color:red;
+}
+
+
+////////////
+// Select //
+////////////
+.select-container {
+    position: relative;
+    margin-top: 27px;
+	select {
+		width: 100%;
+		font-size: $f-16px;
+		height: ($f-16px * 1.6);
+		background: none;
+		border: none;
+		line-height: 1.6;
+		box-shadow: none;
+	}
+	.control-label {
+        position: absolute;
+        padding-left: 5px;
+		z-index: 1;
+		color: #aeaeaf;
+		font-size: $f-16px;
+		font-weight: normal;
+		transition: all 0.28s ease;
+	}
+	.bar {
+		position: relative;
+		border-bottom: 1px solid $blue-main;
+        display: block;
+        margin-top: 5px;
+		
+		&::before {
+			content: '';
+			height: ($f-16px / 8);
+			width: 0;
+			left: 50%;
+			bottom: ($f-16px / -16);
+			position: absolute;
+			background: $blue-main;
+			transition: left 0.28s ease, width 0.28s ease;
+			z-index: 2;
+		}
+	}
+
+	select {
+		color: $font;
+		~ .control-label {
+			font-size: $f-14px;
+			color: #aeaeaf;
+            top: -32px;
+			left: 0;
+		}
+	}
+	select {
+		&:focus {
+			outline: none;
+
+			~ .control-label {
+				
+			}
+
+			~ .bar {
+				&::before {
+					width: 100%;
+					left: 0;
+				}
+			}
+		}
+	}
+}
+
+
+
+///////////////////////////////
+// BOM Card / List drop down //
+///////////////////////////////
+.icon-menu-dropdown{
+    @include text($f-16px, $font);
+    &:hover{
+        @include text($f-16px, $gray-dark);
+        cursor: pointer;
+    }
+}
+
+/////////////////
+// File Upload //
+/////////////////
+.fake-input{
+    width: 100%;
+}
+.uploadInputContainer{
+    padding:15px 0px 0px 0px;
+    position:relative;
+    &:hover{
+        cursor:pointer
+    }
+  }
+
+.uploaded-file{
+    @include ellipsis(90%);
+}
+
+///////////////////////
+// FORM FIELD SEARCH //
+///////////////////////
+.form-field-search{
+    &-container{
+         ts-box-field{
+            padding-left:0px;
+            padding-right:0px;
+            margin-left: -7px;
+        }
+        padding: 10px;
+        height:250px;
+        width: 100%;
+        background: #fff;
+        margin-top: -17px;
+        position: absolute;
+        z-index: 1;
+    }
+    &-close{
+        padding: 4px;
+    }
+    &-results{
+        margin-top: 10px;
+        background: $scroll-gray;
+        height: 164px;
+        width: 100%;
+        overflow: scroll;
+        display: flex;
+        flex-direction: column;
+        padding: 20px;
+    }
+}
+
+

@@ -1,0 +1,32 @@
+/////////////////////
+//  REMINDER MODAL //
+/////////////////////
+
+/* 
+Note: An example of a reminder modal would be in the product details page (AKA item detail). 
+If you go to the downloads tab and try to download download without selecting a document it 
+will show a reminder to select a document. 
+*/
+.modal-body-reminder{
+    margin-left: 230px;
+    @include size(null, 350px);
+    @include med-window {
+            & {
+                margin-left: 0px; 
+             }
+    }
+    &-right,
+    &-left{
+        @include size(325px);
+    }
+    &-left{
+        background-color: $blue-main;
+    }
+}
+.image-select-card{
+    height: 350px;
+    @include placement(absolute, 0px, null, null, 0px);
+    @include med-window {
+            & { display: none; }
+    }
+}

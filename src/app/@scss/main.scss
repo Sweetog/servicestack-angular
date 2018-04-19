@@ -1,0 +1,29 @@
+/////////////
+// VENDORS //
+/////////////
+@import "~bootstrap/dist/css/bootstrap.min.css";
+@import "~font-awesome/css/font-awesome.min.css";
+@import url('https://fonts.googleapis.com/css?family=Open+Sans:300,400,600,700,800');
+@import url('https://fonts.googleapis.com/icon?family=Material+Icons');
+@import '~@angular/material/prebuilt-themes/deeppurple-amber.css';
+@import '~ng2-drag-drop/style.css';
+@import '~ng2-toastr/bundles/ng2-toastr.min.css';
+@import '~ng2-tree/styles.css';
+
+
+////////////////
+// STYLE TREE //
+////////////////
+@import './helpers/_Dir-helper.scss';
+@import './components/_Dir-components.scss';
+@import './base/_Dir-base.scss';
+@import './layout/_Dir-layout.scss';
+@import './pages/_Dir-pages.scss';
+@import './vendors-extensions/_Dir-vendors.scss';
+
+
+
+
+
+
+

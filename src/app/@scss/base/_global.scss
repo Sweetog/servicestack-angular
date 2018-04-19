@@ -1,0 +1,146 @@
+
+////////////
+// GLOBAL //
+////////////
+html,
+body{
+    color:$font;
+    height: 100%;
+    font-size: 16px;
+    overflow-x: hidden;
+    font-family: $font-stack;
+}
+button{
+    font-family: $font-stack;
+    &:focus {outline:0;}
+}
+ul{
+     list-style-type: none;
+ }
+
+hr {
+    margin-top: .75rem;
+    margin-bottom: .75rem;
+}
+
+.back-drop{
+    @include placement(fixed);
+    @include size(100%, 100vh);
+    background-color: $page-backdrop;
+    z-index: -1;
+}
+
+.dark-link{
+    color: #ffffff;
+    &:hover{
+        cursor: pointer;
+        color: $yellow-main;
+    }
+}
+
+
+//STYLE
+.error{
+    color:$red;
+    font-size: 0.8750em;
+}
+.lite-font{
+    @include text(inherit, $font, 300);
+}
+
+//ELEMENTS
+.yellow-hr{
+     border-top: 1px solid $yellow-main;
+ }
+
+h5{
+    color: #ff00ff;
+}
+
+
+.link{
+    color: $blue-main;
+    &:hover{
+        cursor: pointer;
+        color: $blue-dark
+    }
+}
+
+.link-dark{
+    color:#ffffff;
+    &:hover{
+        cursor: pointer;
+        color:$yellow-main;
+    }
+}
+
+//VALIDATION
+.error-block{
+    @include text($f-14px, $red );
+    margin-bottom: 0px;
+}
+
+// Descriptor icons  example: neca labor icon
+.descriptor-icons{
+    @include size(31px,16px);
+}
+
+//Close
+.close{
+    &:hover{
+        cursor: pointer;
+    }
+}
+.close-section-dark{
+    color: #fff;
+    padding:10px;
+    &:hover{
+        cursor: pointer;
+        color: $yellow-main;
+    }
+}
+
+.neighbor-icon{
+    padding-right: 5px;
+}
+
+
+
+.hide_file {
+          position: absolute;
+          z-index: 1000;
+          opacity: 0;
+          cursor: pointer;
+          right: 0;
+          top: 0;
+          height: 100%;
+          font-size: 24px;
+          width: 100%; 
+          & :hover{
+              cursor: pointer;
+          }
+      }
+
+.vertical-rule{
+    height: 100%;
+    position: absolute;
+    width: 2px;
+    background: #e4e1e1;
+}
+
+.breadcrumbs{
+    margin-bottom: 10px;
+    font-size: $f-14px;
+    color: $gray-dark;
+    &-link{
+        &:hover{
+            color:$light-blue;
+            cursor: pointer;
+        }
+    }
+}
+
+.iframe-container{
+    width: 100%;
+    overflow: scroll;
+}

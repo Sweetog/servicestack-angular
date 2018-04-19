@@ -1,0 +1,67 @@
+.side-panel-modal{
+    &-large{
+        &-container{
+            top:0px;
+            z-index: 1050;
+            height: 100vh;
+            width: 50%;
+            background: #fff;
+            position: fixed;  
+            box-sizing: padding-box;
+            -moz-box-sizing: padding-box;
+            -webkit-box-sizing: padding-box; 
+
+            @include med-window{
+               &{
+                width: 100%;
+               }
+            }
+        }
+    }
+    &-container{
+        top:0px;
+        right: -400px;
+        z-index: 1050;
+        height: 100vh;
+        width: 400px;
+        background: #fff;
+        position: fixed;  
+        box-sizing: padding-box;
+        -moz-box-sizing: padding-box;
+        -webkit-box-sizing: padding-box; 
+    }
+    &-body{
+        padding: 15px 10px 15px 15px;
+        height: 100%;
+        overflow-y: scroll;
+    }
+    &-close{
+        top: 4px;
+        & > .close{
+            font-weight: 400;
+        }
+    } 
+    &-overlay {
+        content: '';
+        display: block;
+        position: fixed;
+        top: 0;
+        left: 0;
+        width: 100%;
+        height: 100%;
+        z-index: 1049;
+        background-color: rgba(0,0,0,0.3);
+      }
+        
+}
+
+
+.card-prompt-image{
+    height: 400px;
+    width: auto;
+    &-container{
+        height:400px;
+        width: 100%;
+        @include flex-center;
+    }
+}

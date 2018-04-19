@@ -1,0 +1,19 @@
+// This is a spot to put any temporary CSS that might not fit in the current CSS work flow
+
+.success-container{
+    background: $green-success;
+    color: darken($green-success, 30%);
+    padding: 20px;
+}
+
+.warning-container{
+    background: $yellow-main;
+    color: darken($green-success, 50%);
+    padding: 20px;
+}
+
+.failure-container{
+    background: $red-light;
+    color: darken($green-success, 50%);
+    padding: 20px;
+}

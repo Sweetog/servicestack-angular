@@ -1,0 +1,94 @@
+.wizard-container {
+  position: fixed;
+  z-index: 1035;
+  height: auto;
+  max-height: 700px;
+  width: 800px;
+  margin: auto;
+  top: 0px;
+  left: 0;
+  bottom: 0;
+  right: 0;
+  color:#666;
+}
+
+/* Transparent Overlay */
+.wizard-backdrop {
+  content: '';
+  display: block;
+  position: fixed;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100%;
+  background-color: rgba(0,0,0,0.3);
+}
+
+
+form-wizard{
+  .card{
+    height: auto!important;
+  }
+  .card-header{
+    display: flex;
+    justify-content: flex-end;
+    border-bottom: 0px;
+  }
+  .card-block{
+    height: 100%;
+    padding: 20px;
+  }
+  .nav{
+    width: 300px;
+    justify-content: space-between;
+  }
+  .nav-item{
+    flex-grow: 0;
+    text-align: initial;
+    border-bottom: 0px!important;
+    a {
+      @include text($f-14px);
+    }
+    &.active{
+      a{
+        @include text($f-14px, $yellow-main);
+      }
+    }
+  }
+  .card-footer{
+    border: 0px;
+    padding: 0px 20px 20px 20px;
+    > .btn-secondary.float-right{
+      @extend .btn-primary;
+    }
+    > .btn-secondary.float-left{
+      @extend .btn-primary-cancel;
+    }
+  }
+}//end form-wizard 
+
+
+
+
+
+/* Transparent Over.wizard-container:before {
+  content: '';
+  display: block;
+  position: fixed;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100%;
+  background-color: rgba(0,0,0,0.3);
+}
+
+/* :not(:required) hides these rules from IE9 and below */
+// .wizard-container:not(:required) {
+//   /* hide "loading..." text */
+//   font: 0/0 a;
+ 
+//   text-shadow: none;
+//   background-color: transparent;
+//   border: 0;
+// }
+

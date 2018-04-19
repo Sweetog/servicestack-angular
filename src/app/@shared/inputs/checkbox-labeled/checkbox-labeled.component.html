@@ -1,0 +1,8 @@
+
+<div class="checkbox-container">
+    <input #input [checked]='checked'  (change)="handleCheck($event.target.checked)" type="checkbox" id="{{cssId}}" [disabled]="disabled">
+    <label  for="{{cssId}}">
+        <!-- <span [ngClass]="{'long-label': label.length >= 29, 'xl-long-label': label.length >= 60 }" class="checkbox-labeled">{{label}}</span> -->
+        <span class="checkbox-labeled">{{label}}</span>
+    </label>
+</div>

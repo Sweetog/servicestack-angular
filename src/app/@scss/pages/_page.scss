@@ -1,0 +1,157 @@
+
+/* NOTE: Put all views in the main container. If the view is a single scroll like the product page, put 
+all of the html into another container called "main-container-child", if it has a dual scroll like
+the search card view with the panel and card scroll then do not put in the child container. 
+below you can see the child container gives a global page padding as well as makes the page head display flex to line up
+the page header elements. */
+.main-container{
+    margin: 57px 0px 0px 70px;
+    &-child{
+        min-height: -o-calc(100vh - 110px); /* opera */
+        min-height: -webkit-calc(100vh - 110px); /* google, safari */
+        min-height: -moz-calc(100vh - 110px); /* firefox */
+        padding: 13px 13px 33px 13px; 
+        width:100%;
+        background-color: $page-backdrop;
+        & > .page-header{
+            @include flex-space-between;
+            margin:5px 5px 0px 5px;
+        }
+    }
+}
+
+.page{
+    &-view-toggle{
+        @include lrg-window {
+            & { display: none; }
+        }
+    }
+    &-formatter{
+        width:300px;
+        @include flex-end();
+    }
+    &-actions{
+        @include flex-end();
+        &  .dropdown-menu{
+                width: 275px;
+            }
+        & .nav-action-button {
+            margin-left: 40px;
+        }
+        @include lrg-window{
+            flex-direction: column;
+            background-color: #fff;
+            border: 1px solid $gray-light;
+            display: none;
+        }
+        &-mobile{
+            display: none;
+            @include lrg-window{
+               display: flex;
+               justify-content: flex-end;
+               padding-right:4px;
+            }
+            &  .dropdown-menu{
+                padding:10px;
+                &{
+                    > .nav-action-button {
+                display: block
+                    } 
+                } 
+            }
+        }
+    }
+    &-header{
+        @include flex-space-between();
+    }
+    &-title{
+        padding-top: 5px;
+        padding-left: 5px;
+        @include text($f-20px,$blue-main, 300);
+        &-light{
+            padding-top: 5px;
+            padding-left: 5px;
+            @include text(20px,$yellow-main, 500);
+        }
+    }
+    &-sub-title{
+        padding-top: 5px;
+        @include text(18px,$font, 300);
+        &-light{
+            padding-top: 5px;
+            padding-left: 5px;
+            @include text(18px,$yellow-main, 500);
+        }
+    }
+    &-pagination{
+        width: 100%;
+        padding:10px;
+        display: flex;
+        justify-content: center;
+        align-items: center;
+    }
+}
+
+
+.key{
+    &-value-container{
+        display: flex;
+        flex-wrap: wrap;
+    }
+    &-value-block{
+        padding: 10px;
+        &-sm{
+            width: 133.33px
+        }
+        &-med{
+            width: 200px;
+        }
+        &-lrg{
+            width: 350px;
+        }
+    }
+    &-name{
+        @include text($f-14px ,inherit, 600);
+        &-icon-container{
+            position: relative;
+            height: 21px;
+        }
+    }
+    &-value{
+        @include text($f-16px,inherit, 200);
+    }
+}
+
+//////////////
+// DROPDOWN //
+//////////////
+.dropdown-menu{
+        /* Trying to keep these used on all dropdowns with 
+        more functionality than just some linkes such as "Add BOM" */
+        &-close{
+        width:100%;
+        margin-bottom: 5px;
+            & > .close{
+                @include placement(absolute, 5px, 10px, null, null); 
+            }
+        }
+        &-hr{
+            margin-top:5px;
+            margin-bottom:5px;
+        }
+        /////////////////////////////////////////////
+        // Add New Bom Drop Down (see Nav.Actions) //
+        /////////////////////////////////////////////
+        &-new-bom{
+            @include size(100%, 53px);
+            background: $blue-main;
+            margin-top: 10px;
+            margin-bottom: -8px;
+            & ts-box-field{
+                width: 212px;
+                margin-right:13px;
+            }
+        }
+}
+
+

@@ -1,0 +1,41 @@
+.tab{
+    &-header{
+        display: flex;
+        justify-content: space-between;
+        align-items: center;
+    }
+    &-title{
+        margin-bottom: 15px;
+    }
+    &-card{
+        margin: 10px;
+    }
+    &-content{
+        &-container{
+            padding:20px;
+            min-height: 300px;
+            position: relative;
+        }
+    }
+    &-body{
+        display: flex;
+        flex-wrap: wrap;
+    }
+    &-toggle{
+        &-primary{
+            
+        }
+        &-secondary{
+           display: none; 
+        }
+    }
+    &-actions-container{
+        display: flex;
+        justify-content: flex-end;
+        margin-top:20px;
+        & > ts-button-primary{
+            margin-left: 20px;
+        }
+    }
+}
+

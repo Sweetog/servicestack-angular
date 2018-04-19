@@ -1,0 +1,68 @@
+
+///////////////
+// DIST CARDS //
+///////////////
+.dist{
+    &-request-button-container{
+        @include placement(absolute,null,null,21px,null);
+        width: 254px;
+    }
+    &-status{
+        @include text($f-14px,null,700);
+        margin-top:10px;
+        &-bar{
+            @include placement(absolute,0px,null,null,0px);
+            @include size(5px, 100%);
+        }
+        &-time{
+            @include text($f-14px,$font);
+            display: flex;
+            align-items: center;
+            margin-top:10px;
+        }
+    }
+    //Status Colors
+    &-requested{
+        &  .dist-status-bar{
+            background:$yellow-main;
+        }
+        &  .dist-status{
+            color:$yellow-main;
+        } 
+    }
+    &-approved{
+        &  .dist-status-bar{
+            background:$green;
+        }
+        &  .dist-status{
+            color:$green;
+        }                    
+    }
+    &-rejected{
+        &  .dist-status-bar{
+            background:$red;
+        }
+        &  .dist-status{
+            color:$red;
+        } 
+    }
+    &-authorized{
+        &  .dist-status-bar{
+            background:$light-blue;
+        }
+        &  .dist-status{
+            color:$light-blue;
+        } 
+    }
+    &-submitted{
+        &  .dist-status-bar{
+            background:$orange-main;
+        }
+        &  .dist-status{
+            color:$orange-main;
+        } 
+    }
+}
+
+
+

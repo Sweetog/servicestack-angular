@@ -1,0 +1,45 @@
+.fixed-tag{
+    @include placement(fixed,33%,0px);
+    padding: 13px;
+    background:$blue-main;
+    z-index: 1000;
+    & > i{
+        font-size: 30px;
+        color:#fff;
+    }
+    &-image{
+        height: 35px;
+    }
+    &:hover{
+        cursor: pointer;
+        background:$light-blue;
+    }
+    &-info{
+        @include placement(absolute, -18px, null , null, -18px);
+        color:$blue-main;
+        background: $yellow-main;
+        border-radius: 30px;
+        padding: 7px;
+        font-size: $f-14px;
+        text-align: center;
+        height: 35px;
+        min-width: 35px;
+    }
+}
+
+
+//SHOPPING CART
+.shopping-cart{
+    &-image{
+
+        &-container{
+            width: 50px;
+            height: 50px;
+            overflow: hidden;
+            display: flex;
+            justify-content: center;
+            align-items: center;
+            margin-top: 10px;
+        }
+    }
+}

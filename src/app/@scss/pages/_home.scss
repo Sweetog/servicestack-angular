@@ -1,0 +1,226 @@
+
+$first-break: 1862px;
+$second-break: 1397px;
+$third-break: 1120px;
+
+
+
+///////////////
+// DASHBOARD //
+///////////////
+.chart-container{
+    height: 420px;
+    width: 300px;
+    padding: 20px;
+}
+
+
+.comex{
+    &-container{
+        width:700px;
+        @include ie{
+            margin-bottom: 30px;
+        }
+        @media (max-width: $first-break) { 
+            width:900px;
+         }
+         @media (max-width: $second-break) { 
+            width: 620px;
+         }
+    }
+    &-icon{
+        font-size:1em;
+    }
+    &-graph{
+        &-container{
+            height: 300px;
+            width:100%;
+            @media (max-width: $first-break) { 
+                height: 410px;
+             }
+             @media (max-width: $second-break) { 
+                height: 300px;
+             }
+        }
+    }
+    &-footer{
+        @include size(100%, auto);
+        font-size: 2.75em;
+        padding: 15px; 
+        background-color: $blue-main;
+    }
+}
+
+.jumbo{
+    &-widget{
+            margin-right:20px;
+            width: 300px;
+            margin-bottom: 15px;
+            @media (max-width: $first-break) { 
+                width: 440px;
+            }
+            @media (max-width: $second-break) { 
+                width: 620px;
+             }
+        &-image{
+            width: 100%;
+            height: 490px;
+            background-size: cover;
+            @media (max-width: $first-break) { 
+                height: 350px;
+            }
+        } 
+        &-overlay{
+            width: 100%;
+            height: 490px;
+             @media (max-width: $first-break) { 
+                height: 350px;
+            }
+            position: absolute;
+            background-color: rgba(0, 95, 158, 0.692);
+            &-blue{
+                @extend .jumbo-widget-overlay;
+                background-color: rgba(0, 95, 158, 0.849);
+            }
+            &-yellow{
+                @extend .jumbo-widget-overlay; 
+                background-color: rgba(255, 190, 0, 0.849);                
+            }
+        }
+        &-title{
+            font-size: 28px;
+            color:#ffffff;
+            font-weight: 300;
+            &-white{
+                @extend .jumbo-widget-title;
+                color:#ffffff;
+            }
+            &-blue{
+                @extend .jumbo-widget-title; 
+                color: $blue-main;
+            }
+        }
+        &-value{
+            font-size: 60px;
+            font-weight: 300; 
+            &-white{
+                @extend .jumbo-widget-value;
+                color:#ffffff;
+            }
+            &-blue{
+                @extend .jumbo-widget-value; 
+                color: $blue-main;
+            }
+        }
+    }
+}
+
+
+.welder-background{
+    background-image: url("../assets/images/welder.jpg");    
+}
+
+
+.workers-background{
+    background-image: url("../assets/images/workers.jpg");
+}
+
+
+
+.recent-searches-widget{
+    width:375px;
+    margin:0px 15px 15px 0px;
+    @media (max-width: $second-break) { 
+        width: 620px;
+     }
+    &-popular{
+        // height: 233px;
+    }
+    &-header{
+        background: $light-blue;
+        padding: 15px;
+        height: 155px;
+    }
+}
+
+.dashboard{
+    &-container{
+        margin-right:400px;
+        width: 100%;
+        padding: 15px;
+        background: $page-backdrop;
+    }
+    &-sibling{
+        width: 400px;
+        height: auto;
+        position: fixed;
+        top: 50px;
+        bottom: 0;
+        overflow-x: hidden;
+        overflow-y: hidden;
+        padding:25px 15px 15px 15px;
+        
+        &-container{
+            @include size(400px,auto);
+            @include placement(fixed,50px,0px,0px);
+            z-index: 1000;
+            @media (max-width: $third-break) { 
+                display: none;
+             }
+        }
+    }
+    &-showcase-carousel{
+        width: 511px;
+        height: 400px;
+        & .product-showcase-carousel{
+            height: 349px;
+            @include xl-window {
+                height: auto;
+            }
+        }
+        @media (max-width: $second-break) { 
+            width: 620px;
+         }
+    }
+}
+
+.rss{
+    &-container{
+    }
+    &-image{
+        height: 100px;
+        width: 100px;
+        min-height: 100px;
+        min-width: 100px;
+        background:rgb(98, 139, 214);
+        margin-right:10px;
+    }
+    &-date{
+        @include text($f-14px,$gray-dark);
+    }
+    &-author{
+        @include text($f-14px,$orange-main);
+    }
+    &-title{
+        @include text($f-14px,$font,600);
+    }
+    &-hr{
+
+    }
+}
+
+
+.bom-cpr-container{
+    display: flex;
+    @media (max-width: $second-break) { 
+       display: block;
+     }
+   
+}
+
+.advertorial-container{
+    margin: 0px 15px 15px 0px;
+    background:$blue-main;
+    height: 348px;
+    width: 260px;
+}

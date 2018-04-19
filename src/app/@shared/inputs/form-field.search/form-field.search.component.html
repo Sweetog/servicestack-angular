@@ -1,0 +1,35 @@
+<div style="position:relative">
+ <div class="group" (click)="clickInput()">      
+    <ng-content></ng-content>
+    <span class="highlight"></span>
+    <span [ngClass]="{'bar-light' : type === 'light', 'bar-dark' : type === 'dark' }"  class="col-sm-12"></span>
+    <label class="form-field-label" >{{label}}</label>
+    <!-- error message -->
+    <span class="help-block" *ngIf="hasError">
+                    <p class="error-block" *ngFor="let message of messages">{{ message }}</p>
+    </span>
+</div>
+<div [@showHideTriggerBlock]="dropdownVar" (@showHideTriggerBlock.done)="focusBoxInput($event)" [ngClass]="{'inherit': block}" class="form-field-search-container card">
+   
+    <div class="flex-space-between">
+        <ts-box-field 
+            type="light" 
+            icon="search" 
+            placeHolder="Search" 
+            class="col-sm-11"
+            (keyUpValue)="searchFilterValue = $event">
+        </ts-box-field>
+        <div class="form-field-search-close">
+             <!-- <ts-format-control
+                color="lite"
+                icon="close"
+                (click)="closeSearch()">
+            </ts-format-control> -->
+        </div>
+    </div> 
+    <div class="form-field-search-results">
+        <a (click)="closeSearch(item)" *ngFor="let item of items">{{item.text}}</a>
+    </div>
+</div>
+</div>
+

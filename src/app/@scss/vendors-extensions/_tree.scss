@@ -1,0 +1,54 @@
+tree-internal ul {
+    margin: 3px 0 3px 25px;
+}
+
+tree-internal ul.rootless,
+ul.rootless > li > tree-internal > ul.tree {
+    margin-left: 0px !important;
+}
+
+tree-internal .tree {
+    box-sizing: border-box;
+    font-family: inherit!important;
+}
+
+// div.rootless {
+//     display: none!important;
+// }
+
+// tree-internal .tree li div {
+//     display: flex!important;
+//     align-items: center;
+//     box-sizing: border-box!important;
+// }
+
+// hide underline
+tree-internal .tree .node-value:after {
+    display: none!important;
+}
+
+
+//Arrows
+tree-internal .tree .folding {
+    width: 20px;
+    position: absolute;
+    top: 10px;
+    left: -22px;
+    padding: 0 5px;
+    font-weight: bold;
+    font-size: 9px;
+}
+
+tree-internal .tree li div {
+    position: relative;
+}
+
+tree-internal .tree .node-value {
+    display: inline-block;
+    color: $blue-main !important;
+    font-size: 14px;
+    &:hover{
+        color: $blue-dark!important;
+        cursor: pointer;
+    }
+}

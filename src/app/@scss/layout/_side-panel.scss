@@ -1,0 +1,159 @@
+//////////////////
+// FILTER PANEL //
+//////////////////
+.filter-panel-wrapper{
+    height: auto;
+    // width:355px;
+    overflow: scroll;
+}
+.filter-panel{
+    &-card{
+        width: 341px;
+        padding:10px;
+        margin-left:-7px;
+        margin-right: -14px;
+        box-shadow: 0px 1px 10px $gray-light;
+        & > hr {
+            width: 100%;
+            margin-top:0px;
+            margin-bottom: 5px;
+        }
+    }
+    &-clear-button-container{
+        margin-top: 10px;
+        width: 100%;
+        display: flex;
+        justify-content: flex-end;
+        min-height: 30px;
+    }
+    &-container{
+        @include size(350px);
+        position: fixed;
+        top: 50px;
+        bottom: 0;
+        z-index: 1000;
+        overflow-x: hidden;
+        overflow-y: auto;
+        border-right: 1px solid #eee;
+    }
+    &-search{
+        margin-left: 10px;
+        width: 328px;
+    }
+    &-row{
+        @include flex-space-between;
+        position: relative;
+    }
+    &-number{
+        padding-top: 8px;
+        display: flex;
+        margin-right: 45px;
+        & > ts-format-control{
+            position: absolute;
+            top:0px;
+            right: -4px;
+        }
+    }
+    &-header{
+        @include flex-space-between;
+        margin-top: 25px;
+        align-items: center;
+        padding: 0px 10px 0px 10px;
+        & > .k-icon{
+            padding-top: 2px;
+        }
+    }
+    &-title{
+        @include flex-space-between;
+        align-items: center;
+        padding-left: 10px;
+    }
+    &-section{
+        padding: 0px 10px 0px 10px;
+        &-body{
+            @include text($f-14px);
+            padding-left: 10px;
+            ul{
+               padding-left: 0px;
+            }
+        }
+    }
+    &-hr{
+        @include size(100%);
+    }
+
+    &-search-dropdown{
+        right: -49px;
+        left: auto !important;
+    }
+}
+
+////////////////
+// SIDE PANEL //
+////////////////
+
+ts-filter-panel{
+    background: $scroll-gray;
+}
+
+.side-panel{
+    &-title{
+        @extend .page-title;
+        margin: 20px 10px 10px 10px;
+        &-container {
+            display: flex;
+            justify-content: space-between;
+            & > .side-panel-title-button{
+                margin-top: 14px;
+            }
+        }
+    }
+    &-wrapper{
+        height: auto;
+        width:370px;
+        // overflow: scroll; this was causing a scroll bar issue, dont think we need. 
+    }
+    &-container{
+        @include size(350px);
+        position: fixed;
+        top: 50px;
+        bottom: 0;
+        z-index: 1000;
+        overflow-x: hidden;
+        overflow-y: auto;
+        border-right: 1px solid #eee;
+    }
+     &-hr{
+        @include size(100%);
+    }
+    &-sibling-container{
+            @include size(100%, auto);
+            position: relative;
+            background: $scroll-gray;
+            min-height: -o-calc(100vh - 110px); /* opera */
+            min-height: -webkit-calc(100vh - 110px); /* google, safari */
+            min-height: -moz-calc(100vh - 110px); /* firefox */
+            &-out{
+                padding: 13px 13px 33px 13px;
+            }
+            &-in{
+                padding: 13px 13px 33px 360px;
+            }
+    }
+}
+
+
+
+////////////////////
+// COLUMN MAPPING //
+////////////////////
+.column-drop-section{
+    padding: 0px 20px 0px 10px;
+}
+.drop-section{
+    margin-top: 10px;
+    @include size(100%, 100px);
+    @include flex-center;
+    border: 2px dashed $gray-dark;
+}
+

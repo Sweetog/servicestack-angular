@@ -1,0 +1,13 @@
+<div class="flex">
+    <ng-content></ng-content>
+
+    <!-- this is just for show for the user. The value of the import input
+         is being shown here in this styled input for the users sake only -->
+
+    <ts-form-field type="light" class="fake-input">
+        <input disabled type="text" class="form-field light-field" required [value]="fakeInputValue">
+    </ts-form-field>
+    
+</div>    
+
+

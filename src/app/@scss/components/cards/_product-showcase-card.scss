@@ -1,0 +1,30 @@
+.product-showcase-card{
+    display: flex;
+    @include lrg-window{
+        display: block;
+    }
+    &-container{
+        margin-right: 20px;
+        margin-bottom: 20px;
+    }
+    &-body{
+        padding: 15px;
+    }
+    &-branding{
+        min-width:250px;
+        padding: 15px;
+    }
+    &-footer{
+        background-color: $blue-dark;
+        @include size(100%, 50px);
+        display: flex;
+        justify-content: flex-end;
+        padding-top:10px;
+        @include lrg-window{
+           @include size(100%, auto);
+           flex-direction: column;
+           justify-content: center;
+        }
+    }
+}
+

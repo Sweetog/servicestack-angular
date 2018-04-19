@@ -1,0 +1,55 @@
+/////////////////
+// SIMPLE CARD //
+/////////////////
+.simple-card{
+    margin: 10px;
+    @include size(250px, 100px);
+    background: #fff;
+    padding:15px;
+    &-blue{
+        border-left: solid 5px $blue-main;
+    }
+    &-yellow{
+        border-left: solid 5px $yellow-main;
+    }
+    & > .close {
+        @include placement(absolute, 5px, 9px);
+    }
+    &-title{
+        @include ellipsis(190px);
+    }
+    &-content{
+        margin-top:10px;
+        font-size: $f-12px;
+        text-overflow: ellipsis; 
+        overflow: hidden;
+        white-space: nowrap
+    }
+}
+
+/////////////////
+// SIMPLE LIST //
+/////////////////
+.simple-list{
+    margin: 10px;
+    @include size(auto, 80px);
+    background: #fff;
+    padding:15px;
+    &-blue{
+        border-left: solid 5px $blue-main;
+    }
+    &-yellow{
+        border-left: solid 5px $yellow-main;
+    }
+    & > .close {
+        @include placement(absolute, 5px, 9px);
+    }
+    &-title{
+        @include ellipsis(190px);
+    }
+    &-content{
+        margin-top:10px;
+        font-size: $f-12px;
+        white-space: nowrap;
+    }
+}

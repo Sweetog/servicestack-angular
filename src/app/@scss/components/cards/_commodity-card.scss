@@ -1,0 +1,41 @@
+.commodity-card{
+    margin: 0px 20px 20px 0px;
+    @include size(350px);
+    &:hover{
+        color: $yellow-main;
+        border: $yellow-main solid 4px;
+        cursor: pointer;
+    }
+    &-img{
+        @include size(100%,130px); 
+        overflow: hidden;
+        &  > img{
+            @include size(100%,auto);  
+        }       
+    }
+    &-blue-overlay{
+        opacity: .5;
+        background-color: $blue-main;
+        @include placement(absolute, 0px);
+        @include size(100%,130px);  
+    }
+    &-child{
+        @extend .commodity-card;
+        min-height: 330px;
+    }
+   
+}
+
+.generic-card{
+    @extend .commodity-card;
+    &-img{
+        @extend .commodity-card-img;
+    }
+    &-blue-overlay{
+        @extend .commodity-card-blue-overlay; 
+    }
+
+}
+
+
+

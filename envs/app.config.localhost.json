@@ -1,0 +1,31 @@
+{
+    "services": {
+        "account": "http://sdlxvh03:5007",
+        "auth": "http://sdlxvh03:5006",
+        "item": "http://sdlxvh03:5002",
+        "example": "http://sdlxvh03:5004",
+        "search": "http://sdlxvh03:5013",
+        "distributor": "http://sdlxvh03:5005",
+        "bom": "http://sdlxvh03:5008",
+        "manufacturer": "http://sdlxvh03:5009",
+        "customprice": "http://sdlxvh03:5010",
+        "correspondence": "http://sdlxvh03:5011",
+        "commodity": "http://sdlxvh03:5012",
+        "contractor": "http://sdlxvh03:5014",
+        "logging": "http://sdlxvh03:5015",
+        "advertising": "http://sdlxvh03:5016",
+        "companyprofile": "http://sdlxvh03:5017",
+        "content": "http://sdlxvh03:5018"
+    },
+    "urls": {
+        "analytics": "http://localhost:61299/Analytics/Default.aspx?s=1&ip=12",
+        "eDataFlexBulletinSummary": "http://localhost:61299/eDataFlex/BulletinSummary.aspx?s=1&ip=9",
+        "eDataFlexUploadDownload": "http://localhost:61299/eDataFlex/UploadDownload.aspx?s=1&ip=9",
+        "submittalManager": "http://localhost:61299/Submittals/SubmittalsHome.aspx?s=1&ip=15",
+        "tsoExpectedOrigin": "http://localhost:61299",
+        "imageServerBase": "http://images.tradeservice.com"
+    },
+    "isDevelopment": true,
+    "isStaging": false,
+    "isProduction": false
+}

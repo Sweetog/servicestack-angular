@@ -1,0 +1,67 @@
+/////////////////////////////////////////////////
+// RFQ QUOTE SUMMARY CARDS DESKTOP AND MOBILE. //
+/////////////////////////////////////////////////
+
+.rfq{
+    &-item-card{
+        &-scroll-box{
+            @include size(100%, 311px);
+            padding: 10px;
+            background: $scroll-gray;
+            overflow-x: hidden;
+            overflow-y: scroll;
+        }
+    }
+}
+
+////////////////////////
+// QUOTE SUMMARY CARD //
+////////////////////////
+
+.quote-summary{
+    &-image{
+        &-container{
+            position: absolute;
+            left: -23px;
+            display: flex;
+            justify-content: center;
+            align-items: center;
+        }
+        &-tall{
+            @include size(auto, 147px);            
+        }
+        &-wide{
+            @include size(147px, auto);
+        }
+    }
+    &-card{
+        .key-value-block{
+            padding: 5px;
+        }
+        &-action-container{
+            padding-left:120px;
+        }
+        //need to make others for other statuses
+        // border-left: 10px $green-success solid;
+    }
+}
+
+
+.rfq-item-card-mobile{
+    display:none;
+    @include xl-window{
+        display: block;
+    }
+}
+
+.rfq-item-card{
+    display: block;
+    @include xl-window{
+        display: none;
+    }
+    &-side-bar{
+        @include placement(absolute,0px,null,null,0px);
+        @include size($sidebar-width, 100%);
+    }
+}
+

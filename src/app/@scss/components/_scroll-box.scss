@@ -1,0 +1,16 @@
+.scroll-box{
+    height: 350px;
+    background: #f4f4f4;
+    margin-bottom:20px;
+    padding: 10px;
+    overflow-y: scroll;
+    &-note{
+        font-size: $f-14px;
+        margin-left: 10px;
+    }
+    &-small{
+        @extend .scroll-box;
+        height: 200px;
+    }
+}
+

@@ -1,0 +1,20 @@
+<div class="flex-align-items margin-bottom-10"><span class="margin-right-10">Search By - {{currentOption}}</span>
+    <div ngbDropdown >
+        <!-- <ts-button-round
+            ngbDropdownToggle 
+            placement="top" 
+            icon="edit">
+        </ts-button-round> -->
+        <div ngbDropdownMenu class="dropdown-menu dropdown-menu-left" aria-labelledby="">
+            <button (click)="clickOption(option)" *ngFor="let option of options" class="dropdown-item">{{option}}</button>
+        </div>
+    </div>
+</div>
+<!-- (enterValue)="searchSubmit($event)"  -->
+<ts-box-field
+    inputId="main-search" 
+    type="dark" 
+    icon="search" 
+    [placeHolder]="placeHolder"
+    (enterValue)="enter($event)">
+</ts-box-field>

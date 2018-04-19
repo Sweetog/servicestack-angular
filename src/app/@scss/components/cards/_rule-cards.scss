@@ -1,0 +1,63 @@
+///////////////
+// RULE CARD //
+///////////////
+.rule-card{
+    margin:10px;
+    @include size(350px, 350px);
+    &-header{
+        min-height:80px;
+        @include gradient-blue();
+        padding: 15px 15px 15px 15px;
+    }
+    &-sentence{
+        @include text ($f-13px, #fff);
+        text-align: center;
+    }
+    &-body{
+        padding: 15px;
+    }
+    &-desc{
+        height: 94px;
+        overflow-y: scroll;
+        &-container{
+            min-height: 94px;
+        }
+        &-preview{
+            @include ellipsis(312px);
+        }
+    }
+    &-more{
+        &-button{
+            min-height: 30px;
+        }
+        padding: 15px;
+        background: #fff;
+        height:100%;
+        width:100%;
+        @include placement(absolute);
+    }
+}
+
+.example-equation{
+    @include text($f-24px,null,300);
+    &-column{
+        color:$orange-main;
+    }
+    &-multiplier{
+        color: $blue-dark; 
+       &-value{
+            color:$light-blue;
+       } 
+       &-type{
+           color:$yellow-main;
+       }
+    }
+    &-key{
+        display: flex;
+        width:150px;
+         &-block{
+            @include square(15px);
+            margin-right:7px;
+        }
+    }
+}
